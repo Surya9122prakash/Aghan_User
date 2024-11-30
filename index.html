@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keyword" content="">
+    <meta name="author" content="WRAPCODERS">
+    <title>Login - Aghan Promoters</title>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/Dashboard/logo.png">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/vendors/css/vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/theme.min.css">
+    <style>
+        body {
+            background-image: url('./assets/images/Login/e bike.gif'), url('./assets/images/Login/bike.gif'), url('./assets/images/Login/login-bg.png');
+            /* Add third image */
+            background-repeat: no-repeat, no-repeat, no-repeat;
+            background-position: bottom right, top left, center;
+            background-size: auto, auto, cover;
+            height: 100vh;
+            margin: 0;
+        }
+
+        @media (max-width: 767px) {
+            body {
+                background-image: none, url('./assets/images/Login/bike.gif'), url('./assets/images/Login/login-bg.png');
+                background-size: 250px, 250px, cover;
+                background-position: bottom, top, center;
+                overflow: hidden;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <main class="auth-minimal-wrapper">
+        <div class="auth-minimal-inner">
+            <div class="minimal-card-wrapper">
+                <div class="card mb-4 mt-5 mx-4 mx-sm-0 position-relative"
+                    style="background-color: rgba(255, 255, 255, 0.5);">
+                    <div
+                        class="wd-50 bg-white p-2 rounded-circle shadow-lg position-absolute translate-middle top-0 start-50">
+                        <img src="assets/images/Dashboard/logo.png" alt="" class="img-fluid">
+                    </div>
+                    <div class="card-body p-sm-5 text-center">
+                        <h2 class="fs-20 fw-bolder mb-4">Login</h2>
+
+                        <form id="loginForm" class="w-100 mt-4 pt-2">
+                            <div class="mb-4">
+                                <input style="background-color: rgba(255, 255, 255, 0.5);" type="text" id="userID"
+                                    name="id" class="form-control" placeholder="Enter Your User ID" required
+                                    oninput="validateAndDisplayId(this.value)">
+                                <span id="idValidation" class="text-danger"></span>
+                            </div>
+                            <div class="mb-4 generate-pass">
+                                <div class="input-group field">
+                                    <input style="background-color: rgba(255, 255, 255, 0.5);" type="password"
+                                        class="form-control password" name="password" id="password"
+                                        placeholder="Enter Your Password">
+                                    <span class="input-group-text">
+                                        <i class="far fa-eye" id="togglePassword" style="cursor: pointer;"></i>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="mt-5">
+                                <button type="submit" style="background-color: #24927c; color: #fff;"
+                                    class="btn btn-lg w-100">Sign In</button>
+                            </div>
+
+                        </form>
+                        <br>
+                        <div>
+                            <h3><a href="frgt_pwd.html" style="color: #000;" class="mt-5">Forget password?</a></h3>
+                        </div>
+                        <div class="mt-5  text-muted">
+                            <span style="color: #000;"> Are you a new customer?</span>
+                            <h5><a href="Register.html" style="color: #000;" class="fw-bold">Please Create an
+                                    account</a></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        document.getElementById('loginForm').addEventListener('input', async (event) => {
+            const idInput = document.querySelector('input[name="id"]');
+            const idValidation = document.getElementById('idValidation')
+
+            if (event.target === idInput) {
+                const idValue = idInput.value;
+                if (idValue.length >= 5) {
+                    try {
+                        const response = await fetch(`https://aghan-backend.onrender.com/validate-id?id=${idValue}`);
+                        const data = await response.json();
+                        if (data.exists) {
+                            idValidation.textContent = `${data.username}`;
+                            idValidation.classList.remove('text-danger');
+                            idValidation.classList.add('text-success');
+                        } else {
+                            idValidation.textContent = 'Invalid User ID';
+                            idValidation.classList.add('text-danger');
+                            idValidation.classList.remove('text-success');
+                        }
+                    } catch (error) {
+                        console.error('Error validating User ID:', error);
+                        idValidation.textContent = 'An error occurred while validating.';
+                        idValidation.classList.add('text-danger');
+                        idValidation.classList.remove('text-success');
+                    }
+                } else {
+                    idValidation.textContent = 'User ID must be at least 7 characters.';
+                    idValidation.classList.add('text-danger');
+                    idValidation.classList.remove('text-success');
+                }
+            }
+        })
+        document.getElementById('togglePassword').addEventListener('click', function () {
+            const passwordField = document.getElementById('password');
+            const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordField.setAttribute('type', type);
+            this.classList.toggle('fa-eye-slash');
+        });
+        document.getElementById('loginForm').addEventListener('submit', async function (e) {
+            e.preventDefault();
+
+            const userId = document.getElementById('userID').value;
+            const password = document.getElementById('password').value;
+
+            try {
+                const response = await fetch('https://aghan-backend.onrender.com/login', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ id: userId, password })
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Login Successful!',
+                        showConfirmButton: false,
+                        timer: 1500
+                    }).then(() => {
+                        sessionStorage.setItem('token1', result.token);
+                        window.location.href = 'user.html';
+                    });
+                } else {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: result.message
+                    });
+                }
+
+            } catch (error) {
+                console.error('Error during login:', error);
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'An error occurred. Please try again.'
+                });
+            }
+        });
+    </script>
+    <script src="assets/vendors/js/vendors.min.js"></script>
+    <script src="assets/js/common-init.min.js"></script>
+    <script src="assets/js/theme-customizer-init.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Aghan Promoters" />
+    <meta name="keyword" content="Aghan Promoters" />
+    <meta name="author" content="Aghan Promoters" />
+    <title>Add Funds - Aghan Promoters</title>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/Dashboard/logo.png" />
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/vendors/css/vendors.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/vendors/css/daterangepicker.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/theme.min.css" />
+    <style>
+        body {
+            background-color: #182c25;
+
+        }
+
+        @media (max-width: 768px) {
+            dotlottie-player {
+                display: none;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+</head>
+
+<body>
+    <nav class="nxl-navigation">
+        <div class="navbar-wrapper">
+            <div class="m-header">
+                <a href="user.html" class="b-brand">
+                    <img src="assets/images/Dashboard/aghan-logo-english.png" width="100" alt="Aghan Logo"
+                        class="logo logo-lg" />
+                    <img src="assets/images/Dashboard/logo.png" alt="Aghan logo" class="logo logo-sm" />
+                </a>
+            </div>
+            <div class="navbar-content">
+                <ul class="nxl-navbar">
+                    <li class="nxl-item">
+                        <a href="user.html" class="nxl-link">
+                            <span class="nxl-micon"><i class="feather-grid"></i></span>
+                            <span class="nxl-mtext"><b>Dashboard</b></span>
+                        </a>
+                    </li>
+
+                    <li class="nxl-item">
+                        <a href="./assets/images/Brochure PDF/aghan brochure pdf.pdf" class="nxl-link"
+                            download="aghan brochure pdf.pdf">
+                            <span class="nxl-micon"><i class="feather-download"></i></span>
+                            <span class="nxl-mtext"><b>Download Brochure</b></span>
+                        </a>
+                    </li>
+
+                    <li class="nxl-item">
+                        <a href="user register.html" class="nxl-link">
+                            <span class="nxl-micon"><i class="feather-user-plus"></i></span>
+                            <span class="nxl-mtext"><b>Register</b></span>
+                        </a>
+                    </li>
+
+                    <li class="nxl-item nxl-hasmenu">
+                        <a href="javascript:void(0);" class="nxl-link">
+                            <span class="nxl-micon"><i class="fas fa-user-check"></i></span>
+                            <span class="nxl-mtext"><b>Activation</b></span><span class="nxl-arrow"><i
+                                    class="feather-chevron-right"></i></span>
+                        </a>
+                        <ul class="nxl-submenu">
+                            <li class="nxl-item"><a class="nxl-link" href="add funds.html">Add Funds</a></li>
+                            <li class="nxl-item"><a class="nxl-link" href="topup.html">User Topup</a></li>
+                            <li class="nxl-item"><a class="nxl-link" href="history.html">History</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li class="nxl-item nxl-hasmenu">
+                        <a href="javascript:void(0);" class="nxl-link">
+                            <span class="nxl-micon"> <span class="material-symbols-outlined">account_tree</span></span>
+                            <span class="nxl-mtext">Tree View</span><span class="nxl-arrow"><i
+                                    class="feather-chevron-right"></i></span>
+                        </a>
+                        <ul class="nxl-submenu">
+                            <li class="nxl-item"><a class="nxl-link" href="my direct.html">My Direct</a></li>
+                            <li class="nxl-item"><a class="nxl-link" href="my team.html">My Team</a></li>
+                            <li class="nxl-item"><a class="nxl-link" href="Tree View.html">Tree View</a></li>
+                            <li class="nxl-item"><a class="nxl-link" href="silver board.html">Silver Board</a></li>
+                            <li class="nxl-item"><a class="nxl-link" href="gold board.html">Gold Board</a></li>
+                            <li class="nxl-item"><a class="nxl-link" href="diamond board.html">Diamond Board</a></li>
+                            <li class="nxl-item"><a class="nxl-link" href="platinum board.html">Platinum Board</a></li>
+                            <li class="nxl-item"><a class="nxl-link" href="king board.html">King Board</a></li>
+                        </ul>
+                    </li>
+                    <li class="nxl-item nxl-hasmenu">
+                        <a href="javascript:void(0);" class="nxl-link">
+                            <span class="nxl-micon"><i class="fas fa-exchange-alt"></i></span>
+                            <span class="nxl-mtext">Transactions</span><span class="nxl-arrow"><i
+                                    class="feather-chevron-right"></i></span>
+                        </a>
+                        <ul class="nxl-submenu">
+                            <li class="nxl-item"><a class="nxl-link" href="fund transfer.html">Fund Transfer</a></li>
+                            <li class="nxl-item"><a class="nxl-link" href="internal transfer.html">Internal Transfer</a>
+                            </li>
+                            <li class="nxl-item"><a class="nxl-link" href="AW to EW transfer.html">AW to EW Transfer</a>
+                            </li>
+                            <li class="nxl-item"><a class="nxl-link" href="EW to UW transfer.html">EW to UW Transfer</a>
+                            </li>
+                            <li class="nxl-item"><a class="nxl-link" href="accounts.html">Accounts</a></li>
+                            <li class="nxl-item"><a class="nxl-link" href="transaction.html">All Transactions</a></li>
+                        </ul>
+                    </li>
+                    <li class="nxl-item nxl-hasmenu">
+                        <a href="javascript:void(0);" class="nxl-link">
+                            <span class="nxl-micon"><i class="fas fa-wallet"></i></span>
+                            <span class="nxl-mtext">Income</span><span class="nxl-arrow"><i
+                                    class="feather-chevron-right"></i></span>
+                        </a>
+                        <ul class="nxl-submenu">
+                            <li class="nxl-item"><a class="nxl-link" href="sponser income.html">Sponser Income</a></li>
+                            <li class="nxl-item"><a class="nxl-link" href="silver board income.html">Silver Board
+                                    Income</a></li>
+                            <li class="nxl-item"><a class="nxl-link" href="gold board income.html">Gold Board Income</a>
+                            </li>
+                            <li class="nxl-item"><a class="nxl-link" href="diamond board income.html">Diamond Board
+                                    Income</a></li>
+                            <li class="nxl-item"><a class="nxl-link" href="platinum board income.html">Platinum Board
+                                    Income</a></li>
+                            <li class="nxl-item"><a class="nxl-link" href="king board income.html">King Board Income</a>
+                            </li>
+                            <li class="nxl-item"><a class="nxl-link" href="payout.html">Payout Request</a>
+                            </li>
+                            <li class="nxl-item"><a class="nxl-link" href="payout history.html">Payout Request History</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nxl-item">
+                        <a href="withdraw.html" class="nxl-link">
+                            <span class="nxl-micon"><i class="fas fa-money-bill-wave"></i></span>
+                            <span class="nxl-mtext"><b>Withdraw</b></span>
+                        </a>
+                    </li>
+
+                    <li class="nxl-item">
+                        <a href="refer friends.html" class="nxl-link">
+                            <span class="nxl-micon"><i class="feather-user-plus"></i></span>
+                            <span class="nxl-mtext"><b>Invite Friends</b></span>
+                        </a>
+                    </li>
+
+                    <li class="nxl-item nxl-hasmenu">
+                        <a href="javascript:void(0);" class="nxl-link">
+                            <span class="nxl-micon"><i class="fas fa-user-cog"></i></span>
+                            <span class="nxl-mtext"><b>My Profile</b></span><span class="nxl-arrow"><i
+                                    class="feather-chevron-right"></i></span>
+                        </a>
+                        <ul class="nxl-submenu">
+                            <li class="nxl-item"><a class="nxl-link" href="personal.html">Personal</a></li>
+                            <li class="nxl-item"><a class="nxl-link" href="change password.html">Change Password</a>
+                            </li>
+                            <li class="nxl-item"><a class="nxl-link" href="bank update.html">Bank Update</a></li>
+                            <li class="nxl-item"><a class="nxl-link" href="upi update.html">UPI Update</a></li>
+                            <li class="nxl-item"><a class="nxl-link" href="profile image.html">Profile Image</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nxl-item nxl-hasmenu">
+                        <a href="javascript:void(0);" class="nxl-link">
+                            <span class="nxl-micon"><i class="fas fa-life-ring"></i></span>
+                            <span class="nxl-mtext">Help</span><span class="nxl-arrow"><i
+                                    class="feather-chevron-right"></i></span>
+                        </a>
+                        <ul class="nxl-submenu">
+                            <li class="nxl-item"><a class="nxl-link" href="create tickets.html">Create Tickets</a></li>
+                            <li class="nxl-item"><a class="nxl-link" href="view tickets.html">View Tickets</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nxl-item">
+                        <a href="index.html" class="nxl-link">
+                            <span class="nxl-micon"><i class="fas fa-sign-out-alt"></i></span>
+                            <span class="nxl-mtext"><b>Sign Out</b></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="nxl-header">
+        <div class="header-wrapper">
+            <div class="header-left d-flex align-items-center gap-4">
+                <a href="javascript:void(0);" class="nxl-head-mobile-toggler" id="mobile-collapse">
+                    <div class="hamburger hamburger--arrowturn">
+                        <div class="hamburger-box">
+                            <div class="hamburger-inner"></div>
+                        </div>
+                    </div>
+                </a>
+                <div class="nxl-navigation-toggle">
+                    <a href="javascript:void(0);" id="menu-mini-button">
+                        <i class="feather-align-left"></i>
+                    </a>
+                    <a href="javascript:void(0);" id="menu-expend-button" style="display: none">
+                        <i class="feather-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="header-right ms-auto">
+                <div class="d-flex align-items-center">
+                    <div class="dropdown nxl-h-item nxl-header-language d-none d-sm-flex">
+                        <a href="javascript:void(0);" class="nxl-head-link me-0 nxl-language-link"
+                            data-bs-toggle="dropdown" data-bs-auto-close="outside">
+                            <img src="assets/vendors/img/flags/1x1/in.svg" alt="" class="img-fluid wd-20" />
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end nxl-h-dropdown nxl-language-dropdown">
+                            <div class="dropdown-divider mt-0"></div>
+                            <div class="language-items-wrapper">
+                                <div class="select-language px-4 py-2 hstack justify-content-between gap-4">
+                                    <div class="lh-lg">
+                                        <h6 class="mb-0">Select Language</h6>
+                                        <p class="fs-11 text-muted mb-0">12 languages avaiable!</p>
+                                    </div>
+                                    <a href="javascript:void(0);" class="avatar-text avatar-md" data-bs-toggle="tooltip"
+                                        title="Add Language">
+                                        <i class="feather-plus"></i>
+                                    </a>
+                                </div>
+                                <div class="dropdown-divider"></div>
+                                <div class="row px-4 pt-3">
+                                    <div class="col-sm-4 col-6 language_select">
+                                        <a href="javascript:void(0);" class="d-flex align-items-center gap-2">
+                                            <div class="avatar-image avatar-sm"><img
+                                                    src="assets/vendors/img/flags/1x1/sa.svg" alt=""
+                                                    class="img-fluid" /></div>
+                                            <span>Arabic</span>
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-4 col-6 language_select">
+                                        <a href="javascript:void(0);" class="d-flex align-items-center gap-2">
+                                            <div class="avatar-image avatar-sm"><img
+                                                    src="assets/vendors/img/flags/1x1/bd.svg" alt=""
+                                                    class="img-fluid" /></div>
+                                            <span>Bengali</span>
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-4 col-6 language_select">
+                                        <a href="javascript:void(0);" class="d-flex align-items-center gap-2">
+                                            <div class="avatar-image avatar-sm"><img
+                                                    src="assets/vendors/img/flags/1x1/ch.svg" alt=""
+                                                    class="img-fluid" /></div>
+                                            <span>Chinese</span>
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-4 col-6 language_select">
+                                        <a href="javascript:void(0);" class="d-flex align-items-center gap-2">
+                                            <div class="avatar-image avatar-sm"><img
+                                                    src="assets/vendors/img/flags/1x1/nl.svg" alt=""
+                                                    class="img-fluid" /></div>
+                                            <span>Dutch</span>
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-4 col-6 language_select active">
+                                        <a href="javascript:void(0);" class="d-flex align-items-center gap-2">
+                                            <div class="avatar-image avatar-sm"><img
+                                                    src="assets/vendors/img/flags/1x1/us.svg" alt=""
+                                                    class="img-fluid" /></div>
+                                            <span>English</span>
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-4 col-6 language_select">
+                                        <a href="javascript:void(0);" class="d-flex align-items-center gap-2">
+                                            <div class="avatar-image avatar-sm"><img
+                                                    src="assets/vendors/img/flags/1x1/fr.svg" alt=""
+                                                    class="img-fluid" /></div>
+                                            <span>French</span>
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-4 col-6 language_select">
+                                        <a href="javascript:void(0);" class="d-flex align-items-center gap-2">
+                                            <div class="avatar-image avatar-sm"><img
+                                                    src="assets/vendors/img/flags/1x1/de.svg" alt=""
+                                                    class="img-fluid" /></div>
+                                            <span>German</span>
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-4 col-6 language_select">
+                                        <a href="javascript:void(0);" class="d-flex align-items-center gap-2">
+                                            <div class="avatar-image avatar-sm"><img
+                                                    src="assets/vendors/img/flags/1x1/in.svg" alt=""
+                                                    class="img-fluid" /></div>
+                                            <span>Tamil</span>
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-4 col-6 language_select">
+                                        <a href="javascript:void(0);" class="d-flex align-items-center gap-2">
+                                            <div class="avatar-image avatar-sm"><img
+                                                    src="assets/vendors/img/flags/1x1/ru.svg" alt=""
+                                                    class="img-fluid" /></div>
+                                            <span>Russian</span>
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-4 col-6 language_select">
+                                        <a href="javascript:void(0);" class="d-flex align-items-center gap-2">
+                                            <div class="avatar-image avatar-sm"><img
+                                                    src="assets/vendors/img/flags/1x1/es.svg" alt=""
+                                                    class="img-fluid" /></div>
+                                            <span>Spanish</span>
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-4 col-6 language_select">
+                                        <a href="javascript:void(0);" class="d-flex align-items-center gap-2">
+                                            <div class="avatar-image avatar-sm"><img
+                                                    src="assets/vendors/img/flags/1x1/tr.svg" alt=""
+                                                    class="img-fluid" /></div>
+                                            <span>Turkish</span>
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-4 col-6 language_select">
+                                        <a href="javascript:void(0);" class="d-flex align-items-center gap-2">
+                                            <div class="avatar-image avatar-sm"><img
+                                                    src="assets/vendors/img/flags/1x1/pk.svg" alt=""
+                                                    class="img-fluid" /></div>
+                                            <span>Urdo</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nxl-h-item d-none d-sm-flex">
+                        <div class="full-screen-switcher">
+                            <a href="javascript:void(0);" class="nxl-head-link me-0"
+                                onclick="$('body').fullScreenHelper('toggle');">
+                                <i class="feather-maximize maximize"></i>
+                                <i class="feather-minimize minimize"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="nxl-h-item dark-light-theme">
+                        <a href="javascript:void(0);" class="nxl-head-link me-0 dark-button">
+                            <i class="feather-moon"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="nxl-head-link me-0 light-button" style="display: none">
+                            <i class="feather-sun"></i>
+                        </a>
+                    </div>
+                    <div class="dropdown nxl-h-item">
+                        <a href="javascript:void(0);" data-bs-toggle="dropdown" role="button"
+                            data-bs-auto-close="outside">
+                            <img src="assets/images/Dashboard/logo.png" alt="user-image"
+                                class="img-fluid user-avtar me-0" />
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end nxl-h-dropdown nxl-user-dropdown">
+                            <div class="dropdown-header">
+                                <div class="d-flex align-items-center">
+                                    <img src="assets/images/Dashboard/logo.png" alt="user-image"
+                                        class="img-fluid user-avtar" />
+                                    <div>
+                                        <h6 class="text-dark mb-0">Aghan <span
+                                                class="badge bg-soft-success text-success ms-1"></span></h6>
+                                        <span class="fs-12 fw-medium text-muted">infoaghan@gmail.com</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="javascript:void(0);" class="dropdown-item">
+                                <i class="feather-settings"></i>
+                                <span>Account Settings</span>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="index.html" class="dropdown-item">
+                                <i class="feather-log-out"></i>
+                                <span>Logout</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <style>
+        .form-bg {
+            background-color: #306844;
+            background-size: cover;
+            /* Ensures the background covers the entire container */
+            background-position: center;
+            /* Centers the background */
+            background-repeat: no-repeat;
+            /* Prevents the background from repeating */
+            width: 100%;
+            height: 100vh;
+            /* Example to fill the viewport */
+            transition: background-image 0.5s ease;
+            /* Optional for a smooth transition */
+        }
+
+
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInLeft {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes imageZoom {
+            0% {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes floatButton {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-5px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .animate-fade-up {
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .bank {
+            background-color: #182c25;
+            color: #fff;
+        }
+
+        .qr {
+            background-color: #182c25;
+            color: #fff;
+        }
+    </style>
+    <main class="nxl-container">
+        <div class="nxl-content">
+            <div class="main-content">
+                <div class="row">
+                    <div class="col-sm-12 col-xl-12 d-flex justify-content-center align-items-center">
+                        <div class="form-bg rounded h-100 p-4 w-100"
+                            style="max-width: 550px; animation: fadeIn 2s ease-in-out;">
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <div style="display: flex; align-items: center; animation: slideInLeft 1s;">
+                                    <img src="./assets/images/Icons/add funds.png" alt="Description"
+                                        style="width: 50px; height: 60px; margin-right: 8px; animation: imageZoom 1.5s;">
+                                    <h2 style="color: #fff; margin: 0;">Add Funds</h2>
+                                </div>
+                                <button
+                                    style="padding: 10px 20px; background-color: #182c25; color:  #fff; border: none; border-radius: 5px; cursor: pointer; animation: fadeIn 2s;"><b>History</b></button>
+                            </div>
+                            <p style="text-align: justify;" class="text-light mb-4 animate-fade-up">Add currency to your
+                                activation wallet for sending a fund request to the admin or using instant pay.</p>
+
+                            <div class="d-flex justify-content-center mb-4">
+                                <button id="form1Button" class="btn bank mx-2" onclick="toggleForms('form1')"
+                                    style="animation: floatButton 1.5s infinite;"><b>Bank</b></button>
+                                <button id="form2Button" class="btn qr mx-2" onclick="toggleForms('form2')"
+                                    style="animation: floatButton 1.5s infinite;"><b>UPI</b></button>
+                            </div>
+
+                            <div id="form1" class="form-container">
+                                <form action="" class="w-100 mt-4 pt-2" id="bankForm">
+                                    <div class="form-floating mb-4 position-relative">
+                                        <input type="text" class="form-control" id="holdername" placeholder=""
+                                            value="AGHAN PROMOTERS" readonly required>
+                                        <label for="holdername"><b>Account Holder Name</b></label>
+                                        <button
+                                            class="btn btn-light position-absolute end-0 top-50 translate-middle-y me-2"
+                                            onclick="holderNameInput()" style="border: none;" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" title="Copy">
+                                            <i class="fa-solid fa-copy"></i>
+                                        </button>
+                                    </div>
+
+                                    <div class="form-floating mb-4 position-relative">
+                                        <input type="text" class="form-control" id="accountnumber" placeholder=""
+                                            value="50200085777891" readonly required>
+                                        <label for="accountnumber"><b>Account Number</b></label>
+                                        <button
+                                            class="btn btn-light position-absolute end-0 top-50 translate-middle-y me-2"
+                                            onclick="accountnumberInput()" style="border: none;"
+                                            data-bs-toggle="tooltip" data-bs-placement="top" title="Copy">
+                                            <i class="fa-solid fa-copy"></i>
+                                        </button>
+                                    </div>
+
+                                    <div class="form-floating mb-4 position-relative">
+                                        <input type="text" class="form-control" id="Bankname" placeholder=""
+                                            value="HDFC BANK" readonly required>
+                                        <label for="Bankname"><b>Bank Name</b></label>
+                                        <button
+                                            class="btn btn-light position-absolute end-0 top-50 translate-middle-y me-2"
+                                            onclick="banknameInput()" style="border: none;" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" title="Copy">
+                                            <i class="fa-solid fa-copy"></i>
+                                        </button>
+                                    </div>
+
+                                    <div class="form-floating mb-4 position-relative">
+                                        <input type="text" class="form-control" id="BankIFSC" placeholder=""
+                                            value="HDFC0008114" readonly required>
+                                        <label for="BankIFSC"><b>Bank IFSC</b></label>
+                                        <button
+                                            class="btn btn-light position-absolute end-0 top-50 translate-middle-y me-2"
+                                            onclick="bankIFSCInput()" style="border: none;" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" title="Copy">
+                                            <i class="fa-solid fa-copy"></i>
+                                        </button>
+                                    </div>
+
+                                    <div class="form-floating mb-4 position-relative">
+                                        <input type="text" class="form-control" id="Bankbranch" placeholder=""
+                                            value="ULUNDURPETTAI" readonly required>
+                                        <label for="Bankbranch"><b>Bank Branch</b></label>
+                                        <button
+                                            class="btn btn-light position-absolute end-0 top-50 translate-middle-y me-2"
+                                            onclick="BankbranchInput()" style="border: none;" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" title="Copy">
+                                            <i class="fa-solid fa-copy"></i>
+                                        </button>
+                                    </div>
+
+                                    <br><br>
+                                    <h3 style="color: #fff;">Amount (INR)</h3>
+                                    <div class="form-floating mb-4">
+                                        <input type="text" id="amountBank" class="form-control" name="amount"
+                                            value="5900" placeholder="" required>
+                                        <label for="amountBank">Enter Amount (INR)</label>
+                                    </div>
+                                    <div class="form-floating mb-4">
+                                        <input type="text" id="TransactionIDBank" class="form-control"
+                                            name="TransactionID" placeholder="" required>
+                                        <label for="TransactionIDBank">Transaction ID</label>
+                                    </div>
+
+                                    <div class="d-flex justify-content-center mt-4">
+                                        <button type="submit"
+                                            style="background-color: #182c25; font-size:large; color: #fff;"
+                                            class="btn btn-lg w-50">Submit</button>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div id="form2" class="form-container" style="display: none;">
+                                <form action="" class="w-100 mt-4 pt-2" id="upiForm">
+                                    <div style="display: flex; justify-content: center;">
+                                        <img src="assets/images/QR Code/Aghan Promoters QR Code.jpeg"
+                                            alt="Aghan Promoters QR Code" id="QR Code" class="form-control"
+                                            style="width: 300px; height: 350px; animation: imageZoom 1.5s;" />
+                                    </div>
+
+                                    <br><br>
+
+                                    <div class="form-floating mb-4 position-relative">
+                                        <input type="text" class="form-control" id="UPIID" placeholder=""
+                                            value="aghanpromoters@okhdfcbank" readonly required>
+                                        <label for="UPIID"><b>Bank Branch</b></label>
+                                        <button id="copyButton"
+                                            class="btn btn-light position-absolute end-0 top-50 translate-middle-y me-2"
+                                            onclick="UPIIDInput(event)" style="border: none;" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" title="Copy">
+                                            Copy
+                                        </button>
+                                    </div>
+
+                                    <div class="d-flex justify-content-center mt-4">
+                                        <button type="button"
+                                            style="background-color: #182c25; font-size:large; color: #fff;"
+                                            class="btn btn-lg w-50">Submit</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+        </div>
+        <dotlottie-player src="https://lottie.host/3d382bc7-781b-4004-ac4e-8c5afac75297/FWgMD2bTBi.json"
+            background="transparent" speed="1"
+            style="position: absolute; top: 10px; left: 10px; width: 300px; height: 300px;" loop
+            autoplay></dotlottie-player>
+        <dotlottie-player src="https://lottie.host/4ab883a3-719a-42c0-a340-32b7c4e65de2/rukWSVzIVz.json"
+            background="transparent" speed="1"
+            style="position: absolute; top: 10px; right: 10px; width: 300px; height: 250px;" loop
+            autoplay></dotlottie-player>
+        <dotlottie-player src="https://lottie.host/3d382bc7-781b-4004-ac4e-8c5afac75297/FWgMD2bTBi.json"
+            background="transparent" speed="1"
+            style="position: absolute; bottom: 10px; right: 10px; width: 300px; height: 300px;" loop
+            autoplay></dotlottie-player>
+        <dotlottie-player src="https://lottie.host/4ab883a3-719a-42c0-a340-32b7c4e65de2/rukWSVzIVz.json"
+            background="transparent" speed="1"
+            style="position: absolute; bottom: 80px; left: 10px; width: 300px; height: 300px;" loop
+            autoplay></dotlottie-player>
+
+    </main>
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+    <script>
+        function toggleForms(form) {
+            const form1 = document.getElementById('form1');
+            const form2 = document.getElementById('form2');
+            const form1Button = document.getElementById('form1Button');
+            const form2Button = document.getElementById('form2Button');
+
+            if (form === 'form1') {
+                form1.style.display = 'block';
+                form2.style.display = 'none';
+                form1Button.classList.add('btn-primary');
+                form1Button.classList.remove('btn-secondary');
+                form2Button.classList.add('btn-secondary');
+                form2Button.classList.remove('btn-primary');
+            } else {
+                form1.style.display = 'none';
+                form2.style.display = 'block';
+                form1Button.classList.add('btn-secondary');
+                form1Button.classList.remove('btn-primary');
+                form2Button.classList.add('btn-primary');
+                form2Button.classList.remove('btn-secondary');
+            }
+        }
+    </script>
+    <script src="assets/vendors/js/vendors.min.js"></script>
+    <script src="assets/vendors/js/daterangepicker.min.js"></script>
+    <script src="assets/vendors/js/apexcharts.min.js"></script>
+    <script src="assets/vendors/js/circle-progress.min.js"></script>
+    <script src="assets/js/common-init.min.js"></script>
+    <script src="assets/js/dashboard-init.min.js"></script>
+    <script src="assets/js/theme-customizer-init.min.js"></script>
+    <script>
+        function holderNameInput() {
+            const holderNameInput = document.getElementById("holdername");
+            holderNameInput.select();
+            holderNameInput.setSelectionRange(0, 99999);
+            document.execCommand("copy");
+            alert("Account Holder Name Copied : " + holderNameInput.value);
+        }
+
+        function accountnumberInput() {
+            const accountnumberInput = document.getElementById("accountnumber");
+            accountnumberInput.select();
+            accountnumberInput.setSelectionRange(0, 99999);
+            document.execCommand("copy");
+            alert("Account Number Copied : " + accountnumberInput.value);
+        }
+
+        function banknameInput() {
+            const banknameInput = document.getElementById("Bankname");
+            banknameInput.select();
+            banknameInput.setSelectionRange(0, 99999);
+            document.execCommand("copy");
+            alert("Bank Name Copied : " + banknameInput.value);
+        }
+
+        function bankIFSCInput() {
+            const bankIFSCInput = document.getElementById("BankIFSC");
+            bankIFSCInput.select();
+            bankIFSCInput.setSelectionRange(0, 99999);
+            document.execCommand("copy");
+            alert("Bank IFSC Copied : " + bankIFSCInput.value);
+        }
+
+        function BankbranchInput() {
+            const BankbranchInput = document.getElementById("Bankbranch");
+            BankbranchInput.select();
+            BankbranchInput.setSelectionRange(0, 99999);
+            document.execCommand("copy");
+            alert("Bank Branch Copied : " + BankbranchInput.value);
+        }
+
+        function UPIIDInput(event) {
+            event.preventDefault();
+
+            const UPIIDInput = document.getElementById("UPIID");
+            const copyButton = document.getElementById("copyButton");
+
+            UPIIDInput.select();
+            UPIIDInput.setSelectionRange(0, 99999);
+            document.execCommand("copy");
+
+            copyButton.textContent = "Copied!";
+            setTimeout(() => {
+                copyButton.textContent = "Copy";
+            }, 1000);
+        }
+
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl)
+            })
+        });
+
+        function getJwtToken() {
+            return sessionStorage.getItem('token1');
+        }
+
+        document.getElementById('bankForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            sendAddFundsRequest('bankForm');
+        });
+
+        document.getElementById('upiForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            sendAddFundsRequest('upiForm');
+        });
+
+        function sendAddFundsRequest(formId) {
+            const amount = document.getElementById(`amount${formId === 'bankForm' ? 'Bank' : 'UPI'}`).value;
+            const transactionId = document.getElementById(`TransactionID${formId === 'bankForm' ? 'Bank' : 'UPI'}`).value;
+            const token = getJwtToken();
+
+            const form = document.getElementById(formId); 
+
+            if (!token) {
+                console.error('JWT token not found. Please log in.');
+                Swal.fire('Error!', 'JWT token not found. Please log in.', 'error');
+                return;
+            }
+
+            fetch('https://aghan-backend.onrender.com/add-funds', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`
+                },
+                body: JSON.stringify({ amount, transaction_id: transactionId })
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log('Add funds request successful:', data);
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Your add funds request has been submitted!',
+                        icon: 'success',
+                        confirmButtonText: 'OK'
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            window.location.href = 'user.html';
+                        }
+                    });
+                    form.reset(); 
+                })
+                .catch(error => {
+                    console.error('Add funds request failed:', error);
+                    Swal.fire('Error!', 'There was an error processing your request. Please try again later.', 'error');
+                });
+        }
+
+
+    </script>
+
+    <script>
+        window.onload = function () {
+            let formBg = document.querySelector('.form-bg');
+
+            // Set the GIF as the initial background
+            formBg.style.backgroundImage = "url('./assets/images/GIF/gif-1.gif')";
+
+            // Create an image element to detect when the GIF has loaded
+            let img = new Image();
+            img.src = './assets/images/GIF/gif-1.gif';
+
+            // You can adjust the timeout depending on the duration of your GIF
+            img.onload = function () {
+                setTimeout(function () {
+                    // Set the background to a static image or color after the GIF has played
+                    formBg.style.backgroundImage = "url('./assets/images/static-image.jpg')"; // Replace with your static image path
+                }, 5000); // Adjust this timeout to match the duration of your GIF
+            };
+        };
+    </script>
+
+</body>
+
+</html>

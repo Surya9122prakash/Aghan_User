@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Aghan Promoters" />
+    <meta name="keyword" content="Aghan Promoters" />
+    <meta name="author" content="Aghan Promoters" />
+    <title>UPI Update - Aghan Promoters</title>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/Dashboard/logo.png" />
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/vendors/css/vendors.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/vendors/css/daterangepicker.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/theme.min.css" />
+    <style>
+        body {
+            background-color: #182c25;
+        }
+
+        .form-bg {
+            background-color: #306844 !important;
+        }
+    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+</head>
+
+<body>
+    <nav class="nxl-navigation">
+        <div class="navbar-wrapper">
+            <div class="m-header">
+                <a href="user.html" class="b-brand">
+                    <img src="assets/images/Dashboard/aghan-logo-english.png" width="100" alt="Aghan Logo"
+                        class="logo logo-lg" />
+                    <img src="assets/images/Dashboard/logo.png" alt="Aghan logo" class="logo logo-sm" />
+                </a>
+            </div>
+            <div class="navbar-content">
+                <ul class="nxl-navbar">
+                    <li class="nxl-item">
+                        <a href="user.html" class="nxl-link">
+                            <span class="nxl-micon"><i class="feather-grid"></i></span>
+                            <span class="nxl-mtext"><b>Dashboard</b></span>
+                        </a>
+                    </li>
+
+                    <li class="nxl-item">
+                        <a href="./assets/images/Brochure PDF/aghan brochure pdf.pdf" class="nxl-link"
+                            download="aghan brochure pdf.pdf">
+                            <span class="nxl-micon"><i class="feather-download"></i></span>
+                            <span class="nxl-mtext"><b>Download Brochure</b></span>
+                        </a>
+                    </li>
+
+                    <li class="nxl-item">
+                        <a href="user register.html" class="nxl-link">
+                            <span class="nxl-micon"><i class="feather-user-plus"></i></span>
+                            <span class="nxl-mtext"><b>Register</b></span>
+                        </a>
+                    </li>
+
+                    <li class="nxl-item nxl-hasmenu">
+                        <a href="javascript:void(0);" class="nxl-link">
+                            <span class="nxl-micon"><i class="fas fa-user-check"></i></span>
+                            <span class="nxl-mtext"><b>Activation</b></span><span class="nxl-arrow"><i
+                                    class="feather-chevron-right"></i></span>
+                        </a>
+                        <ul class="nxl-submenu">
+                            <li class="nxl-item"><a class="nxl-link" href="add funds.html">Add Funds</a></li>
+                            <li class="nxl-item"><a class="nxl-link" href="topup.html">User Topup</a></li>
+                            <li class="nxl-item"><a class="nxl-link" href="history.html">History</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li class="nxl-item nxl-hasmenu">
+                        <a href="javascript:void(0);" class="nxl-link">
+                            <span class="nxl-micon"> <span class="material-symbols-outlined">account_tree</span></span>
+                            <span class="nxl-mtext">Tree View</span><span class="nxl-arrow"><i
+                                    class="feather-chevron-right"></i></span>
+                        </a>
+                        <ul class="nxl-submenu">
+                            <li class="nxl-item"><a class="nxl-link" href="my direct.html">My Direct</a></li>
+                            <li class="nxl-item"><a class="nxl-link" href="my team.html">My Team</a></li>
+                            <li class="nxl-item"><a class="nxl-link" href="Tree View.html">Tree View</a></li>
+                            <li class="nxl-item"><a class="nxl-link" href="silver board.html">Silver Board</a></li>
+                            <li class="nxl-item"><a class="nxl-link" href="gold board.html">Gold Board</a></li>
+                            <li class="nxl-item"><a class="nxl-link" href="diamond board.html">Diamond Board</a></li>
+                            <li class="nxl-item"><a class="nxl-link" href="platinum board.html">Platinum Board</a></li>
+                            <li class="nxl-item"><a class="nxl-link" href="king board.html">King Board</a></li>
+                        </ul>
+                    </li>
+                    <li class="nxl-item nxl-hasmenu">
+                        <a href="javascript:void(0);" class="nxl-link">
+                            <span class="nxl-micon"><i class="fas fa-exchange-alt"></i></span>
+                            <span class="nxl-mtext">Transactions</span><span class="nxl-arrow"><i
+                                    class="feather-chevron-right"></i></span>
+                        </a>
+                        <ul class="nxl-submenu">
+                            <li class="nxl-item"><a class="nxl-link" href="fund transfer.html">Fund Transfer</a></li>
+                            <li class="nxl-item"><a class="nxl-link" href="internal transfer.html">Internal Transfer</a>
+                            </li>
+                            <li class="nxl-item"><a class="nxl-link" href="AW to EW transfer.html">AW to EW Transfer</a>
+                            </li>
+                            <li class="nxl-item"><a class="nxl-link" href="EW to UW transfer.html">EW to UW Transfer</a>
+                            </li>
+                            <li class="nxl-item"><a class="nxl-link" href="accounts.html">Accounts</a></li>
+                            <li class="nxl-item"><a class="nxl-link" href="transaction.html">All Transactions</a></li>
+                        </ul>
+                    </li>
+                    <li class="nxl-item nxl-hasmenu">
+                        <a href="javascript:void(0);" class="nxl-link">
+                            <span class="nxl-micon"><i class="fas fa-wallet"></i></span>
+                            <span class="nxl-mtext">Income</span><span class="nxl-arrow"><i
+                                    class="feather-chevron-right"></i></span>
+                        </a>
+                        <ul class="nxl-submenu">
+                            <li class="nxl-item"><a class="nxl-link" href="sponser income.html">Sponser Income</a></li>
+                            <li class="nxl-item"><a class="nxl-link" href="silver board income.html">Silver Board
+                                    Income</a></li>
+                            <li class="nxl-item"><a class="nxl-link" href="gold board income.html">Gold Board Income</a>
+                            </li>
+                            <li class="nxl-item"><a class="nxl-link" href="diamond board income.html">Diamond Board
+                                    Income</a></li>
+                            <li class="nxl-item"><a class="nxl-link" href="platinum board income.html">Platinum Board
+                                    Income</a></li>
+                            <li class="nxl-item"><a class="nxl-link" href="king board income.html">King Board Income</a>
+                            </li>
+                            <li class="nxl-item"><a class="nxl-link" href="payout.html">Payout Request</a>
+                            </li>
+                            <li class="nxl-item"><a class="nxl-link" href="payout history.html">Payout Request History</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nxl-item">
+                        <a href="withdraw.html" class="nxl-link">
+                            <span class="nxl-micon"><i class="fas fa-money-bill-wave"></i></span>
+                            <span class="nxl-mtext"><b>Withdraw</b></span>
+                        </a>
+                    </li>
+
+                    <li class="nxl-item">
+                        <a href="refer friends.html" class="nxl-link">
+                            <span class="nxl-micon"><i class="feather-user-plus"></i></span>
+                            <span class="nxl-mtext"><b>Invite Friends</b></span>
+                        </a>
+                    </li>
+
+                    <li class="nxl-item nxl-hasmenu">
+                        <a href="javascript:void(0);" class="nxl-link">
+                            <span class="nxl-micon"><i class="fas fa-user-cog"></i></span>
+                            <span class="nxl-mtext"><b>My Profile</b></span><span class="nxl-arrow"><i
+                                    class="feather-chevron-right"></i></span>
+                        </a>
+                        <ul class="nxl-submenu">
+                            <li class="nxl-item"><a class="nxl-link" href="personal.html">Personal</a></li>
+                            <li class="nxl-item"><a class="nxl-link" href="change password.html">Change Password</a>
+                            </li>
+                            <li class="nxl-item"><a class="nxl-link" href="bank update.html">Bank Update</a></li>
+                            <li class="nxl-item"><a class="nxl-link" href="upi update.html">UPI Update</a></li>
+                            <li class="nxl-item"><a class="nxl-link" href="profile image.html">Profile Image</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nxl-item nxl-hasmenu">
+                        <a href="javascript:void(0);" class="nxl-link">
+                            <span class="nxl-micon"><i class="fas fa-life-ring"></i></span>
+                            <span class="nxl-mtext">Help</span><span class="nxl-arrow"><i
+                                    class="feather-chevron-right"></i></span>
+                        </a>
+                        <ul class="nxl-submenu">
+                            <li class="nxl-item"><a class="nxl-link" href="create tickets.html">Create Tickets</a></li>
+                            <li class="nxl-item"><a class="nxl-link" href="view tickets.html">View Tickets</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nxl-item">
+                        <a href="index.html" class="nxl-link">
+                            <span class="nxl-micon"><i class="fas fa-sign-out-alt"></i></span>
+                            <span class="nxl-mtext"><b>Sign Out</b></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="nxl-header">
+        <div class="header-wrapper">
+            <div class="header-left d-flex align-items-center gap-4">
+                <a href="javascript:void(0);" class="nxl-head-mobile-toggler" id="mobile-collapse">
+                    <div class="hamburger hamburger--arrowturn">
+                        <div class="hamburger-box">
+                            <div class="hamburger-inner"></div>
+                        </div>
+                    </div>
+                </a>
+                <div class="nxl-navigation-toggle">
+                    <a href="javascript:void(0);" id="menu-mini-button">
+                        <i class="feather-align-left"></i>
+                    </a>
+                    <a href="javascript:void(0);" id="menu-expend-button" style="display: none">
+                        <i class="feather-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="header-right ms-auto">
+                <div class="d-flex align-items-center">
+                    <div class="dropdown nxl-h-item nxl-header-language d-none d-sm-flex">
+                        <a href="javascript:void(0);" class="nxl-head-link me-0 nxl-language-link"
+                            data-bs-toggle="dropdown" data-bs-auto-close="outside">
+                            <img src="assets/vendors/img/flags/1x1/in.svg" alt="" class="img-fluid wd-20" />
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end nxl-h-dropdown nxl-language-dropdown">
+                            <div class="dropdown-divider mt-0"></div>
+                            <div class="language-items-wrapper">
+                                <div class="select-language px-4 py-2 hstack justify-content-between gap-4">
+                                    <div class="lh-lg">
+                                        <h6 class="mb-0">Select Language</h6>
+                                        <p class="fs-11 text-muted mb-0">12 languages avaiable!</p>
+                                    </div>
+                                    <a href="javascript:void(0);" class="avatar-text avatar-md" data-bs-toggle="tooltip"
+                                        title="Add Language">
+                                        <i class="feather-plus"></i>
+                                    </a>
+                                </div>
+                                <div class="dropdown-divider"></div>
+                                <div class="row px-4 pt-3">
+                                    <div class="col-sm-4 col-6 language_select">
+                                        <a href="javascript:void(0);" class="d-flex align-items-center gap-2">
+                                            <div class="avatar-image avatar-sm"><img
+                                                    src="assets/vendors/img/flags/1x1/sa.svg" alt=""
+                                                    class="img-fluid" /></div>
+                                            <span>Arabic</span>
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-4 col-6 language_select">
+                                        <a href="javascript:void(0);" class="d-flex align-items-center gap-2">
+                                            <div class="avatar-image avatar-sm"><img
+                                                    src="assets/vendors/img/flags/1x1/bd.svg" alt=""
+                                                    class="img-fluid" /></div>
+                                            <span>Bengali</span>
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-4 col-6 language_select">
+                                        <a href="javascript:void(0);" class="d-flex align-items-center gap-2">
+                                            <div class="avatar-image avatar-sm"><img
+                                                    src="assets/vendors/img/flags/1x1/ch.svg" alt=""
+                                                    class="img-fluid" /></div>
+                                            <span>Chinese</span>
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-4 col-6 language_select">
+                                        <a href="javascript:void(0);" class="d-flex align-items-center gap-2">
+                                            <div class="avatar-image avatar-sm"><img
+                                                    src="assets/vendors/img/flags/1x1/nl.svg" alt=""
+                                                    class="img-fluid" /></div>
+                                            <span>Dutch</span>
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-4 col-6 language_select active">
+                                        <a href="javascript:void(0);" class="d-flex align-items-center gap-2">
+                                            <div class="avatar-image avatar-sm"><img
+                                                    src="assets/vendors/img/flags/1x1/us.svg" alt=""
+                                                    class="img-fluid" /></div>
+                                            <span>English</span>
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-4 col-6 language_select">
+                                        <a href="javascript:void(0);" class="d-flex align-items-center gap-2">
+                                            <div class="avatar-image avatar-sm"><img
+                                                    src="assets/vendors/img/flags/1x1/fr.svg" alt=""
+                                                    class="img-fluid" /></div>
+                                            <span>French</span>
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-4 col-6 language_select">
+                                        <a href="javascript:void(0);" class="d-flex align-items-center gap-2">
+                                            <div class="avatar-image avatar-sm"><img
+                                                    src="assets/vendors/img/flags/1x1/de.svg" alt=""
+                                                    class="img-fluid" /></div>
+                                            <span>German</span>
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-4 col-6 language_select">
+                                        <a href="javascript:void(0);" class="d-flex align-items-center gap-2">
+                                            <div class="avatar-image avatar-sm"><img
+                                                    src="assets/vendors/img/flags/1x1/in.svg" alt=""
+                                                    class="img-fluid" /></div>
+                                            <span>Tamil</span>
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-4 col-6 language_select">
+                                        <a href="javascript:void(0);" class="d-flex align-items-center gap-2">
+                                            <div class="avatar-image avatar-sm"><img
+                                                    src="assets/vendors/img/flags/1x1/ru.svg" alt=""
+                                                    class="img-fluid" /></div>
+                                            <span>Russian</span>
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-4 col-6 language_select">
+                                        <a href="javascript:void(0);" class="d-flex align-items-center gap-2">
+                                            <div class="avatar-image avatar-sm"><img
+                                                    src="assets/vendors/img/flags/1x1/es.svg" alt=""
+                                                    class="img-fluid" /></div>
+                                            <span>Spanish</span>
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-4 col-6 language_select">
+                                        <a href="javascript:void(0);" class="d-flex align-items-center gap-2">
+                                            <div class="avatar-image avatar-sm"><img
+                                                    src="assets/vendors/img/flags/1x1/tr.svg" alt=""
+                                                    class="img-fluid" /></div>
+                                            <span>Turkish</span>
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-4 col-6 language_select">
+                                        <a href="javascript:void(0);" class="d-flex align-items-center gap-2">
+                                            <div class="avatar-image avatar-sm"><img
+                                                    src="assets/vendors/img/flags/1x1/pk.svg" alt=""
+                                                    class="img-fluid" /></div>
+                                            <span>Urdo</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nxl-h-item d-none d-sm-flex">
+                        <div class="full-screen-switcher">
+                            <a href="javascript:void(0);" class="nxl-head-link me-0"
+                                onclick="$('body').fullScreenHelper('toggle');">
+                                <i class="feather-maximize maximize"></i>
+                                <i class="feather-minimize minimize"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="nxl-h-item dark-light-theme">
+                        <a href="javascript:void(0);" class="nxl-head-link me-0 dark-button">
+                            <i class="feather-moon"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="nxl-head-link me-0 light-button" style="display: none">
+                            <i class="feather-sun"></i>
+                        </a>
+                    </div>
+                    <div class="dropdown nxl-h-item">
+                        <a href="javascript:void(0);" data-bs-toggle="dropdown" role="button"
+                            data-bs-auto-close="outside">
+                            <img src="assets/images/Dashboard/logo.png" alt="user-image"
+                                class="img-fluid user-avtar me-0" />
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end nxl-h-dropdown nxl-user-dropdown">
+                            <div class="dropdown-header">
+                                <div class="d-flex align-items-center">
+                                    <img src="assets/images/Dashboard/logo.png" alt="user-image"
+                                        class="img-fluid user-avtar" />
+                                    <div>
+                                        <h6 class="text-dark mb-0">Aghan <span
+                                                class="badge bg-soft-success text-success ms-1"></span></h6>
+                                        <span class="fs-12 fw-medium text-muted">infoaghan@gmail.com</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="javascript:void(0);" class="dropdown-item">
+                                <i class="feather-settings"></i>
+                                <span>Account Settings</span>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="index.html" class="dropdown-item">
+                                <i class="feather-log-out"></i>
+                                <span>Logout</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="nxl-container">
+        <div class="nxl-content">
+            <div class="main-content">
+                <div class="row">
+                    <div class="col-sm-12 col-xl-12 d-flex justify-content-center align-items-center">
+                        <div class="form-bg rounded h-100 p-4 w-100" style="max-width: 600px;">
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="./assets/images/Icons/QR Update.png" alt="Description"
+                                        style="width: 70px; height: 70px; margin-right: 8px;">
+                                    <h4 style="color: #fff; margin: 0;">UPI Update</h4>
+                                </div>
+                                <button id="editBtn"
+                                    style="padding: 10px 20px; background-color: #182c25; color: #fff; border: none; border-radius: 5px; cursor: pointer;">
+                                    <b>Edit</b>
+                                </button>
+                            </div>
+                            <form id="main-upi-form" class="w-100 mt-4 pt-2">
+                                <input type="hidden" id="upi_id_main" name="upi_id" value="">
+                                <div class="mb-3">
+                                    <label for="upi_address" class="form-label">UPI Address:</label>
+                                    <input type="text" class="form-control" id="upi_address" disabled readonly
+                                        placeholder="Enter UPI Address">
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="googlepay" disabled readonly
+                                        placeholder="Enter Google Pay">
+                                    <label for="googlepay"><b class="text-success">Google Pay</b></label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="phonpe" disabled readonly
+                                        placeholder="Enter PhonePe">
+                                    <label for="phonpe"><b class="text-success">PhonePe</b></label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="paytm" disabled readonly
+                                        placeholder="Enter PayTM">
+                                    <label for="paytm"><b class="text-success">PayTM</b></label>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="qrCode" class="form-label text-light">QR Code Image:</label>
+                                    <img id="qrCodeDisplay" src="" alt="QR Code"
+                                        style="max-width:200px; max-height:200px; display:none;">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Modal Structure -->
+    <div class="modal" style="padding-top: 50px;" id="editModal">
+        <div class="col-sm-12 col-xl-12 d-flex justify-content-center align-items-center">
+            <div class="form-bg rounded h-100 p-4 w-100" style="max-width: 600px;">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <div style="display: flex; align-items: center;">
+                        <img src="./assets/images/Icons/QR Update.png" alt="Description"
+                            style="width: 70px; height: 70px; margin-right: 8px;">
+                        <h4 style="color: #fff; margin: 0;">UPI Update Here</h4>
+                    </div>
+                    <button id="cancelBtn" style="background: none; border: none; cursor: pointer;">
+                        <i class="fas fa-times" style="color: #fff; font-size: 24px;"></i>
+                    </button>
+                </div>
+                <form id="upi-details-form" method="POST" enctype="multipart/form-data">
+                    <input type="hidden" id="upi_id" name="upi_id" value="">
+                    <div class="mb-3">
+                        <label for="upi_address" class="form-label text-light">UPI Address:</label>
+                        <input type="text" class="form-control" id="upi_addressM" name="upi_address"
+                            placeholder="Enter UPI Address" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="googlepayM" class="form-label text-light">Google Pay:</label>
+                        <input type="text" class="form-control" id="googlepayM" name="googlepay"
+                            placeholder="Enter Google Pay">
+                    </div>
+                    <div class="mb-3">
+                        <label for="phonpeM" class="form-label text-light">PhonePe:</label>
+                        <input type="text" class="form-control" id="phonpeM" name="phonpe" placeholder="Enter PhonePe">
+                    </div>
+                    <div class="mb-3">
+                        <label for="paytmM" class="form-label text-light">Paytm:</label>
+                        <input type="text" class="form-control" id="paytmM" name="paytm" placeholder="Enter Paytm">
+                    </div>
+                    <div class="mb-3">
+                        <label for="upi_image" class="form-label text-light">QR Code Image:</label>
+                        <input type="file" class="form-control" id="upi_image" name="upi_image" accept="image/*"
+                            onchange="previewQrCode(this)">
+                    </div>
+                    <img id="qrCodePreview" src="#" alt="QR Code Preview"
+                        style="max-width: 200px; max-height: 200px; display: none;">
+
+                    <div class="d-flex justify-content-center mt-4">
+                        <button type="submit" class="btn btn-primary">Update</button>
+                        <button type="button" id="cancelBtn1" class="btn btn-secondary">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="modalOverlay" class="modal-backdrop fade" style="display:none;"></div>
+    <!--File Upload Start-->
+    <style>
+        /* From Uiverse.io by akshat-patel28 */
+        .input-div {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 2px solid rgb(1, 235, 252);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            box-shadow: 0px 0px 100px rgb(1, 235, 252), inset 0px 0px 10px rgb(1, 235, 252), 0px 0px 5px rgb(255, 255, 255);
+            animation: flicker 2s linear infinite;
+        }
+
+        .icon {
+            color: rgb(1, 235, 252);
+            font-size: 2rem;
+            cursor: pointer;
+            animation: iconflicker 2s linear infinite;
+        }
+
+        .input {
+            position: absolute;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer !important;
+        }
+
+        @keyframes flicker {
+            0% {
+                border: 2px solid rgb(1, 235, 252);
+                box-shadow: 0px 0px 100px rgb(1, 235, 252), inset 0px 0px 10px rgb(1, 235, 252), 0px 0px 5px rgb(255, 255, 255);
+            }
+
+            5% {
+                border: none;
+                box-shadow: none;
+            }
+
+            10% {
+                border: 2px solid rgb(1, 235, 252);
+                box-shadow: 0px 0px 100px rgb(1, 235, 252), inset 0px 0px 10px rgb(1, 235, 252), 0px 0px 5px rgb(255, 255, 255);
+            }
+
+            25% {
+                border: none;
+                box-shadow: none;
+            }
+
+            30% {
+                border: 2px solid rgb(1, 235, 252);
+                box-shadow: 0px 0px 100px rgb(1, 235, 252), inset 0px 0px 10px rgb(1, 235, 252), 0px 0px 5px rgb(255, 255, 255);
+            }
+
+            100% {
+                border: 2px solid rgb(1, 235, 252);
+                box-shadow: 0px 0px 100px rgb(1, 235, 252), inset 0px 0px 10px rgb(1, 235, 252), 0px 0px 5px rgb(255, 255, 255);
+            }
+        }
+
+        @keyframes iconflicker {
+            0% {
+                opacity: 1;
+            }
+
+            5% {
+                opacity: 0.2;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            25% {
+                opacity: 0.2;
+            }
+
+            30% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+    <!--File Upload End-->
+    <div class="modal-overlay" id="modalOverlay"
+        style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5);">
+    </div>
+
+    <script src="assets/vendors/js/vendors.min.js"></script>
+    <script src="assets/vendors/js/daterangepicker.min.js"></script>
+    <script src="assets/vendors/js/apexcharts.min.js"></script>
+    <script src="assets/vendors/js/circle-progress.min.js"></script>
+    <script src="assets/js/common-init.min.js"></script>
+    <script src="assets/js/dashboard-init.min.js"></script>
+    <script src="assets/js/theme-customizer-init.min.js"></script>
+    <script>
+        function showAlert(type, message) {
+            const alertContainer = document.getElementById('alert-container');
+            const alertElement = `
+        <div class="alert alert-${type} alert-dismissible fade show" role="alert">
+            ${message}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    `;
+            alertContainer.innerHTML = alertElement;
+        }
+
+        function previewQrCode(input) {
+            const qrCodePreview = document.getElementById('qrCodePreview');
+            if (input.files && input.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    qrCodePreview.src = e.target.result;
+                    qrCodePreview.style.display = 'block';
+                };
+                reader.readAsDataURL(input.files[0]);
+            } else {
+                qrCodePreview.style.display = 'none';
+            }
+        }
+
+        async function convertToBase64(file) {
+            return new Promise((resolve, reject) => {
+                const reader = new FileReader();
+                reader.onload = () => resolve(reader.result);
+                reader.onerror = reject;
+                reader.readAsDataURL(file);
+            });
+        }
+        async function handleUpiFormSubmission(event) {
+            event.preventDefault();
+
+            const data = {
+                upi_address: document.getElementById('upi_addressM').value,
+                googlepay: document.getElementById('googlepayM').value,
+                phonpe: document.getElementById('phonpeM').value,
+                paytm: document.getElementById('paytmM').value,
+                upi_image: document.getElementById('upi_image').files[0] ? await convertToBase64(document.getElementById('upi_image').files[0]) : null
+            };
+
+            try {
+                const token = sessionStorage.getItem('token1');
+                if (!token) {
+                    throw new Error("Authentication token not found!");
+                }
+
+                const response = await fetch('https://aghan-backend.onrender.com/upi-details', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${token}`
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                if (!response.ok) {
+                    if (response.status === 401) {
+                        showAlert('danger', 'Unauthorized. Please log in.');
+                        window.location.href = 'index.html';
+                        return;
+                    }
+                    const errorData = await response.json();
+                    throw new Error(`HTTP error! status: ${response.status}, message: ${errorData.message}`);
+                }
+
+                const result = await response.json();
+                showAlert('success', result.message);
+                editModal.style.display = 'none';
+                modalOverlay.style.display = 'none';
+                await fetchAndPopulateUpiDetails();
+
+            } catch (error) {
+                console.error('Error updating UPI details:', error);
+                showAlert('danger', 'Error updating UPI details: ' + error.message);
+            }
+        }
+
+        async function fetchAndPopulateUpiDetails() {
+            try {
+                const token = sessionStorage.getItem('token1');
+                if (!token) {
+                    throw new Error("Authentication token not found!");
+                }
+
+                const response = await fetch('https://aghan-backend.onrender.com/upi-details', {
+                    method: 'GET',
+                    headers: {
+                        'Authorization': `Bearer ${token}`
+                    }
+                });
+
+                if (!response.ok) {
+                    if (response.status === 401) {
+                        showAlert('danger', 'Unauthorized. Please log in.');
+                        window.location.href = 'index.html';
+                        return;
+                    }
+                    const errorData = await response.json();
+                    throw new Error(`HTTP error! status: ${response.status}, message: ${errorData.error}`);
+                }
+
+                const data = await response.json();
+                console.log(data);
+
+                const upiAddress = document.getElementById('upi_address');
+                const googlePay = document.getElementById('googlepay');
+                const phonePe = document.getElementById('phonpe');
+                const paytm = document.getElementById('paytm');
+                const qrCodeDisplay = document.getElementById('qrCodeDisplay');
+                const qrCodePreview = document.getElementById('qrCodePreview');
+
+                if (data.message) {
+                    upiAddress.value = '';
+                    googlePay.value = '';
+                    phonePe.value = '';
+                    paytm.value = '';
+                    upiAddress.placeholder = data.message;
+                    document.querySelectorAll('#editModal input[type="text"], #editModal input[type="tel"]').forEach(input => input.value = '');
+                    qrCodeDisplay.style.display = 'none'; // Hide the image if no data
+                    qrCodePreview.style.display = 'none'; // Hide QR code preview
+                } else {
+                    upiAddress.value = data.upi_address || '';
+                    googlePay.value = data.googlepay || '';
+                    phonePe.value = data.phonpe || '';
+                    paytm.value = data.paytm || '';
+                    document.getElementById('upi_id_main').value = data.upi_id || '';
+                    document.getElementById('editModal').querySelector('#upi_addressM').value = data.upi_address || '';
+                    document.getElementById('editModal').querySelector('#googlepayM').value = data.googlepay || '';
+                    document.getElementById('editModal').querySelector('#phonpeM').value = data.phonpe || '';
+                    document.getElementById('editModal').querySelector('#paytmM').value = data.paytm || '';
+                    document.getElementById('editModal').querySelector('#upi_id').value = data.upi_id || '';
+
+                    //Set QR code image src
+                    qrCodeDisplay.src = data.image_name || '';
+                    qrCodeDisplay.style.display = data.image_name ? 'block' : 'none'; // Show image only if it exists
+                    qrCodePreview.src = data.image_name || '#'; //Default to # if no image
+                    qrCodePreview.style.display = data.image_name ? 'block' : 'none';
+                }
+            } catch (error) {
+                console.error('Error fetching UPI details:', error);
+                showAlert('danger', 'Error fetching UPI details: ' + error.message);
+            }
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            const editBtn = document.getElementById('editBtn');
+            const editModal = document.getElementById('editModal');
+            const modalOverlay = document.getElementById('modalOverlay');
+            const cancelBtn = document.getElementById('cancelBtn');
+            const cancelBtn1 = document.getElementById('cancelBtn1');
+            const upiDetailsForm = document.getElementById('upi-details-form');
+
+            //Check if elements exist before attaching event listeners
+            if (editBtn) editBtn.addEventListener('click', () => {
+                editModal.style.display = 'block';
+                modalOverlay.style.display = 'block';
+            });
+            if (cancelBtn) cancelBtn.addEventListener('click', () => {
+                editModal.style.display = 'none';
+                modalOverlay.style.display = 'none';
+            });
+            if (cancelBtn1) cancelBtn1.addEventListener('click', () => {
+                editModal.style.display = 'none';
+                modalOverlay.style.display = 'none';
+            });
+            if (modalOverlay) modalOverlay.addEventListener('click', () => {
+                editModal.style.display = 'none';
+                modalOverlay.style.display = 'none';
+            });
+            if (upiDetailsForm) upiDetailsForm.addEventListener('submit', handleUpiFormSubmission);
+
+            fetchAndPopulateUpiDetails();
+
+            const qrCodeInput = document.getElementById('upi_image');
+            if (qrCodeInput) qrCodeInput.addEventListener('change', () => previewQrCode(qrCodeInput));
+        });
+    </script>
+</body>
+
+</html>
