@@ -20,163 +20,6 @@
       body {
          background-color: #182c25;
       }
-
-      .card {
-         background: none;
-      }
-
-      .table>:not(caption)>*>* {
-         color: #fff;
-      }
-
-      .tree {
-         display: flex;
-         justify-content: center;
-         /* Center the tree horizontally */
-         overflow: auto;
-         /* Enable scrolling if the tree is too wide */
-      }
-
-      .tree ul {
-         padding-top: 20px;
-         position: relative;
-         transition: all 0.5s;
-         -webkit-transition: all 0.5s;
-         -moz-transition: all 0.5s;
-      }
-
-      .tree li {
-         float: left;
-         text-align: center;
-         list-style-type: none;
-         position: relative;
-         padding: 20px 5px 0 5px;
-         transition: all 0.5s;
-         -webkit-transition: all 0.5s;
-         -moz-transition: all 0.5s;
-      }
-
-      .tree li::before,
-      .tree li::after {
-         content: '';
-         position: absolute;
-         top: 0;
-         right: 50%;
-         border-top: 2px solid #ccc;
-         width: 50%;
-         height: 20px;
-      }
-
-      .tree li::after {
-         right: auto;
-         left: 50%;
-         border-left: 2px solid #ccc;
-      }
-
-      /*Connector styles for the leftmost and rightmost nodes*/
-      .tree li:only-child::after,
-      .tree li:only-child::before {
-         display: none;
-      }
-
-      /*Connector styles for the leftmost node*/
-      .tree li:only-child {
-         padding-top: 0;
-      }
-
-      .tree li:last-child::before {
-         border-right: 2px solid #ccc;
-         border-radius: 0 5px 0 0;
-         -webkit-border-radius: 0 5px 0 0;
-         -moz-border-radius: 0 5px 0 0;
-      }
-
-      .tree li:first-child::after {
-         border-radius: 5px 0 0 0;
-         -webkit-border-radius: 5px 0 0 0;
-         -moz-border-radius: 5px 0 0 0;
-      }
-
-      /*Connector styles when the tree represents a parent-child relationship*/
-
-      .tree>ul>li::before,
-      .tree>ul>li::after {
-         border: 0;
-      }
-
-      .tree>ul>li:last-child::before {
-         border-right: 2px solid #ccc;
-         border-radius: 0 5px 0 0;
-         -webkit-border-radius: 0 5px 0 0;
-         -moz-border-radius: 0 5px 0 0;
-      }
-
-      .tree>ul>li:first-child::after {
-         border-radius: 5px 0 0 0;
-         -webkit-border-radius: 5px 0 0 0;
-         -moz-border-radius: 5px 0 0 0;
-      }
-
-      /*Adding 'connector' lines between parents and children*/
-
-      .tree li:last-child::before {
-         border-left: 2px solid #ccc;
-         border-right: 0;
-      }
-
-      .tree li:first-child::after {
-         border-right: 2px solid #ccc;
-         border-left: 0;
-      }
-
-      .tree ul ul li:first-child::after {
-         border-left: 2px solid #ccc;
-      }
-
-      .tree.fourmatrix ul.first_level_mem>li>a {
-         width: 150px !important;
-      }
-
-      @media only screen and (max-width: 420px) {
-         .tree.fourmatrix ul.first_level_mem>li>a {
-            width: 90px !important;
-         }
-      }
-
-      .tree ul.second_level_mem>li>a {
-         width: 85px !important;
-      }
-
-      .tree li a:hover .mem_info {
-         display: block;
-      }
-
-      .mem_info {
-         display: none;
-         position: absolute;
-         left: -100px;
-         background: #306844;
-         border: 2px solid rgb(255, 165, 0);
-         padding: 5px 10px;
-         border-radius: 5px;
-         width: 200px;
-         z-index: 1;
-         color: #fff;
-      }
-
-      .img-radius {
-         border-radius: 5px;
-      }
-
-      .img-80 {
-         width: 80px;
-         height: 80px;
-      }
-
-      .tree3_uinfo {
-         margin-top: 5px;
-         color: #fff;
-      }
    </style>
    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
 </head>
@@ -508,6 +351,31 @@
          </div>
       </div>
    </header>
+   <style>
+      .card {
+         background-color: #005627 !important;
+      }
+
+      .table>:not(caption)>*>* {
+         background-color: #005627 !important;
+         color: #fff;
+      }
+
+      @media only screen and (max-width: 420px) {
+         .tree.fourmatrix ul.first_level_mem>li>a {
+            width: 200px !important;
+         }
+      }
+
+      .tree ul.second_level_mem>li>a {
+         width: 80px !important;
+      }
+
+      .tree li a:hover .mem_info {
+         display: block;
+      }
+   </style>
+
    <main class="nxl-container">
       <div class="nxl-content">
          <div class="main-content">
@@ -552,6 +420,7 @@
       function getAuthToken() {
          return sessionStorage.getItem('token1');
       }
+
       async function fetchGenealogyData(userId) {
          try {
             const response = await fetch(`https://aghan-backend.onrender.com/tree/${userId}`, {
@@ -574,12 +443,11 @@
          }
       }
 
-
       function renderGenealogyTree(treeData) {
          const treeContainer = document.getElementById('treeContainer');
+         treeContainer.innerHTML = ''; // Clear previous content
 
          function createNodeElement(node) {
-            console.log("Node:", node);
             const li = document.createElement('li');
             const a = document.createElement('a');
             const img = document.createElement('img');
@@ -589,35 +457,56 @@
             img.src = 'assets/images/Dashboard/avatar.png';
             img.className = 'img-80 img-radius';
             userInfo.className = 'tree3_uinfo';
-            userInfo.innerHTML = `${node.user_id}<br>${node.referrer_id}`;
-            memInfo.className = 'mem_info';
-            memInfo.innerHTML = `<table>
-                         <tr><th>Name:</th><td>${node.username}</td></tr>
-                           <tr><th>ID:</th><td>${node.user_id}</td></tr>
-                           <tr><th>Parent:</th><td>${'N/A'}</td></tr>
-                           <tr><th>L1 Count:</th><td>${node['L1 Count'] || 0}</td></tr>
-                           <tr><th>L2 Count:</th><td>${node['L2 Count'] || 0}</td></tr>
-                           <tr><th>L3 Count:</th><td>${node['L3 Count'] || 0}</td></tr>
-                           <tr><th>L4 Count:</th><td>${node['L4 Count'] || 0}</td></tr>
-                           <tr><th>L5 Count:</th><td>${node['L5 Count'] || 0}</td></tr>
-                           <tr><th>Total:</th><td>${node['Total'] || 0}</td></tr>
-                         </table>`;
+            userInfo.innerHTML = `${node.user_id}<br>${node.referrer_id || ''}`; //handle null referrer_id
 
             a.appendChild(img);
             a.appendChild(userInfo);
-            a.appendChild(memInfo);
-            li.appendChild(a);
 
-            if (node.children && node.children.length > 0) {
+            // Apply active/inactive styles
+            a.classList.add(node.status === 'Active' ? 'active-member' : 'inactive-member');
+
+            if (node.status === 'Active') { // Only add memInfo for active members and make it hoverable
+               memInfo.className = 'mem_info';
+               memInfo.innerHTML = `<table>
+                       <tr><th>Name:</th><td>${node.username}</td></tr>
+                         <tr><th>ID:</th><td>${node.user_id}</td></tr>
+                         <tr><th>Parent:</th><td>${node.referrer_id || ''}</td></tr>
+                         <tr><th>L1 Count:</th><td>${node['L1 Count'] || 0}</td></tr>
+                         <tr><th>L2 Count:</th><td>${node['L2 Count'] || 0}</td></tr>
+                         <tr><th>L3 Count:</th><td>${node['L3 Count'] || 0}</td></tr>
+                         <tr><th>L4 Count:</th><td>${node['L4 Count'] || 0}</td></tr>
+                         <tr><th>L5 Count:</th><td>${node['L5 Count'] || 0}</td></tr>
+                         <tr><th>Total:</th><td>${node['Total'] || 0}</td></tr>
+                       </table>`;
+               a.appendChild(memInfo);
+            }
+
+            li.appendChild(a);
+            const totalSlots = 6; // Adjust as needed
+            let existingChildren = node.children || [];
+
+            if (node.level !== undefined && node.level < 2) { // Limit levels for placeholders (adjust as needed)
                const ul = document.createElement('ul');
-               if (node.level === 0) {
-                  ul.classList.add('first_level_mem');
-               } else {
-                  ul.classList.add('second_level_mem');
-               }
-               node.children.forEach(child => {
+               if (node.level === 0) ul.classList.add('first_level_mem');
+               else ul.classList.add('second_level_mem');
+
+               // Add existing children
+               existingChildren.forEach(child => {
                   ul.appendChild(createNodeElement(child));
                });
+
+               // Add placeholders for missing children (inactive)
+               for (let i = existingChildren.length; i < totalSlots; i++) {
+                  const placeholderNode = {
+                     user_id: 'Inactive',
+                     username: 'Inactive',
+                     referrer_id: null,
+                     status: 'Inactive',
+                     level: node.level + 1,
+                     children: []
+                  };
+                  ul.appendChild(createNodeElement(placeholderNode));
+               }
                li.appendChild(ul);
             }
 
@@ -628,6 +517,7 @@
       }
 
       async function fetchUserDetails() {
+         //This function is not directly used in viewtree.html but kept here for completeness if needed later
          try {
             const token = sessionStorage.getItem('token1');
             const response = await fetch('https://aghan-backend.onrender.com/user', {
@@ -661,5 +551,61 @@
       }
    </script>
 </body>
+
+<style>
+   /* Styles for active and inactive members */
+   .tree li a.active-member {
+      border: 2px solid #28a745;
+      /* Green border for active members */
+      background-color: rgba(40, 167, 69, 0.1);
+      /* Light green background */
+   }
+
+   .tree li a.inactive-member {
+      border: 2px solid #6c757d;
+      /* Gray border for inactive/vacant members */
+      background-color: rgba(108, 117, 125, 0.1);
+      /* Light gray background */
+      opacity: 0.6;
+   }
+
+   .tree li a.inactive-member .tree3_uinfo {
+      color: #6c757d;
+   }
+
+   .tree li a .mem_info {
+      display: none;
+      position: absolute;
+      z-index: 10;
+      background-color: #005627;
+      color: white;
+      border: 1px solid #28a745;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 250px;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+   }
+
+   .tree li a:hover .mem_info {
+      display: block;
+   }
+
+   .tree li a .mem_info table {
+      width: 100%;
+   }
+
+   .tree li a .mem_info table th {
+      text-align: left;
+      padding-right: 10px;
+      width: 40%;
+   }
+
+   .tree li a .mem_info table td {
+      text-align: left;
+   }
+</style>
 
 </html>
