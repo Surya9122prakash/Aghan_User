@@ -21,7 +21,6 @@
         }
 
         #password-validation {
-            display: none;
             list-style: none;
             padding: 0;
         }
@@ -32,6 +31,20 @@
 
         #password-validation .validation-mark {
             margin-right: 5px;
+        }
+
+        .introducer-id-wrapper {
+            position: relative;
+        }
+        .dont-know-button {
+            position: absolute;
+            padding-top: 20px;
+            padding-right: 60px;
+            right: 0;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: black;
+            font-weight: 800;
         }
     </style>
 </head>
@@ -53,6 +66,7 @@
                             <div class="mb-4">
                                 <input style="background-color: rgba(255, 255, 255, 0.5);" type="text"
                                     class="form-control" placeholder="Enter Introducer ID" name="introducer_id">
+                                <a class="dont-know-button" onclick="handleDontKnow()">I don't know?</a>
                                 <span id="introducerIdValidation" class="text-danger"></span>
                             </div>
                             <div class="mb-4">
@@ -380,7 +394,6 @@
                                     </li>
                                 </ul>
                             </div>
-
                             <div class="mb-4 generate-pass">
                                 <div class="input-group field">
                                     <input style="background-color: rgba(255, 255, 255, 0.5);" type="password"
@@ -419,6 +432,9 @@
         </div>
     </main>
     <script>
+        function handleDontKnow() {
+            document.querySelector('input[name="introducer_id"]').value = "AP5678";
+        }
         document.getElementById('toggleconfirmPassword').addEventListener('click', function () {
             const passwordField = document.getElementById('confirmpassword');
             const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';

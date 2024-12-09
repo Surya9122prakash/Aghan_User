@@ -445,6 +445,19 @@
                 display: none;
             }
         }
+        .introducer-id-wrapper {
+            position: relative;
+        }
+        .dont-know-button {
+            position: absolute;
+            padding-top: 20px;
+            padding-right: 60px;
+            right: 0;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: black;
+            font-weight: 800;
+        }
     </style>
     <main class="nxl-container">
         <div class="nxl-content">
@@ -459,6 +472,7 @@
                                 <div class="mb-4">
                                     <input type="text" class="form-control" placeholder="Enter Introducer ID"
                                         id="introducerid">
+                                    <a class="dont-know-button" onclick="handleDontKnow()">I don't know?</a>
                                     <span id="introducerIdValidation" class="text-danger"></span>
                                 </div>
                                 <div class="mb-4">
@@ -864,6 +878,9 @@
     <script src="assets/js/dashboard-init.min.js"></script>
     <script src="assets/js/theme-customizer-init.min.js"></script>
     <script>
+        function handleDontKnow() {
+            document.querySelector('input[name="introducer_id"]').value = "AP5678";
+        }
         document.getElementById('togglePassword').addEventListener('click', function () {
             const passwordInput = document.getElementById('password');
             const icon = this;
