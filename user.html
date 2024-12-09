@@ -126,7 +126,8 @@
                             </li>
                             <li class="nxl-item"><a class="nxl-link" href="payout.html">Payout Request</a>
                             </li>
-                            <li class="nxl-item"><a class="nxl-link" href="payout history.html">Payout Request History</a>
+                            <li class="nxl-item"><a class="nxl-link" href="payout history.html">Payout Request
+                                    History</a>
                             </li>
                         </ul>
                     </li>
@@ -873,6 +874,13 @@
                     </div>
 
                     <script>
+                        const urlParams = new URLSearchParams(window.location.search);
+                        const token1 = urlParams.get('token');
+                        if (token1) {
+                            sessionStorage.setItem('token1', token1);
+                            console.log('Token saved:', token1);
+                        }
+
                         let user = {};
                         let token = sessionStorage.getItem('token1');
                         document.addEventListener('DOMContentLoaded', () => {
@@ -900,9 +908,9 @@
                                     document.getElementById('userName').querySelector('b').textContent = `${user.username} (${user.user_id})`;
                                     document.getElementById('sponsorId').textContent = `${user.sponsor_username} (${user.sponsor_id})`; // Access sponsor data directly
                                     document.getElementById('name').textContent = user.username;
-                                    if(board!==null){
+                                    if (board !== null) {
                                         document.getElementById('userBoard').textContent = board + ' BOARD';
-                                    } else{
+                                    } else {
                                         document.getElementById('userBoard').textContent = 'NO BOARD';
                                     }
                                     const createdAt = new Date(user.created_at);
@@ -1175,10 +1183,10 @@
                         fetchRebirthBonusStatus();
 
                         document.addEventListener('DOMContentLoaded', () => {
-                                fetchUserProfile();
-                                fetchNews();
-                                fetchNewMembers();
-                                fetchAchievers();
+                            fetchUserProfile();
+                            fetchNews();
+                            fetchNewMembers();
+                            fetchAchievers();
                         });
                     </script>
 </body>
