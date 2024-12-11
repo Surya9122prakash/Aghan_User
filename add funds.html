@@ -25,6 +25,13 @@
                 display: none;
             }
         }
+
+        #addFundsMessage {
+            /* Style for message span */
+            display: none;
+            margin-top: 10px;
+            text-align: center;
+        }
     </style>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
 </head>
@@ -132,7 +139,8 @@
                             </li>
                             <li class="nxl-item"><a class="nxl-link" href="payout.html">Payout Request</a>
                             </li>
-                            <li class="nxl-item"><a class="nxl-link" href="payout history.html">Payout Request History</a>
+                            <li class="nxl-item"><a class="nxl-link" href="payout history.html">Payout Request
+                                    History</a>
                             </li>
                         </ul>
                     </li>
@@ -582,6 +590,7 @@
                                             class="btn btn-lg w-50">Submit</button>
                                     </div>
                                 </form>
+                                <span id="addFundsMessage"></span>
                             </div>
 
                             <div id="form2" class="form-container" style="display: none;">
@@ -612,6 +621,7 @@
                                             class="btn btn-lg w-50">Submit</button>
                                     </div>
                                 </form>
+                                <span id="addFundsMessage"></span>
                             </div>
                         </div>
                     </div>
@@ -758,11 +768,10 @@
             const transactionId = document.getElementById(`TransactionID${formId === 'bankForm' ? 'Bank' : 'UPI'}`).value;
             const token = getJwtToken();
 
-            const form = document.getElementById(formId); 
+            const form = document.getElementById(formId);
 
             if (!token) {
                 console.error('JWT token not found. Please log in.');
-                Swal.fire('Error!', 'JWT token not found. Please log in.', 'error');
                 return;
             }
 
@@ -782,21 +791,31 @@
                 })
                 .then(data => {
                     console.log('Add funds request successful:', data);
-                    Swal.fire({
-                        title: 'Success!',
-                        text: 'Your add funds request has been submitted!',
-                        icon: 'success',
-                        confirmButtonText: 'OK'
-                    }).then((result) => {
-                        if (result.isConfirmed) {
-                            window.location.href = 'user.html';
-                        }
-                    });
-                    form.reset(); 
+
+                    // Display success message and redirect
+                    const messageSpan = document.getElementById('addFundsMessage');
+                    messageSpan.textContent = 'Your add funds request has been submitted!';
+                    messageSpan.style.display = 'block';
+                    messageSpan.classList.add('alert', 'alert-success'); // Add Bootstrap alert classes
+
+                    setTimeout(() => {
+                        window.location.href = 'user.html';
+                    }, 3000); // Redirect after 3 seconds
+                    form.reset();
                 })
                 .catch(error => {
                     console.error('Add funds request failed:', error);
-                    Swal.fire('Error!', 'There was an error processing your request. Please try again later.', 'error');
+
+                    // Display error message
+                    const messageSpan = document.getElementById('addFundsMessage');
+                    messageSpan.textContent = 'There was an error processing your request. Please try again later.';
+                    messageSpan.style.display = 'block';
+                    messageSpan.classList.add('alert', 'alert-danger'); // Add Bootstrap alert classes
+
+                    setTimeout(() => {
+                        messageSpan.style.display = 'none'; // Hide the message after a delay
+                    }, 5000); // Hide after 5 seconds
+
                 });
         }
 

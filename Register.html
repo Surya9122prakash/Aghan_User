@@ -36,6 +36,7 @@
         .introducer-id-wrapper {
             position: relative;
         }
+
         .dont-know-button {
             position: absolute;
             padding-top: 20px;
@@ -45,6 +46,11 @@
             cursor: pointer;
             color: black;
             font-weight: 800;
+        }
+
+        #registrationMessage {
+            display: none;
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -101,9 +107,9 @@
                                     class="form-control" name="city" for="city" placeholder="Enter Your City" required>
                             </div>
                             <div class="mb-4">
-                                <input style="background-color: rgba(255, 255, 255, 0.5);" type="number" id="zipcode"
-                                    class="form-control" name="zipcode" for="zipcode"
-                                    placeholder="Enter Your Postal/Zip Code" required>
+                                <input style="background-color: rgba(255, 255, 255, 0.5);" type="tel" id="mobile"
+                                    class="form-control" name="mobile" placeholder="Enter Your Mobile Number" required>
+                                <span id="mobileValidation" class="text-danger"></span>
                             </div>
                             <div class="mb-4 row">
                                 <div class="col-md-6">
@@ -420,6 +426,7 @@
                                     class="btn btn-lg w-100">Register</button>
                             </div>
                         </form>
+                        <span id="registrationMessage" class="text-center"></span>
                         <div class="mt-5 text-muted">
                             <h3><span>Already have an account ?</span>
                                 <a style=" color: #000;" href="index.html" class="fw-bold">Sign in instead</a>
@@ -533,22 +540,25 @@
                 })
                 .then(data => {
                     this.reset();
-                    Swal.fire({
-                        icon: 'success',
-                        title: 'Registration Successful!',
-                        text: 'You have been registered successfully.',
-                        confirmButtonText: 'OK'
-                    }).then(() => {
+                    const registrationMessage = document.getElementById('registrationMessage');
+                    registrationMessage.textContent = 'Registration Successful! Redirecting...';
+                    registrationMessage.style.display = 'block';
+                    registrationMessage.classList.add('text-success'); // Add success styling
+
+
+                    setTimeout(() => {
                         window.location.href = 'index.html';
-                    });
+                    }, 5000);
                 })
                 .catch(error => {
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Registration Failed',
-                        text: 'Registration failed. Please try again later.',
-                        confirmButtonText: 'OK'
-                    });
+                    const registrationMessage = document.getElementById('registrationMessage');
+                    registrationMessage.textContent = 'Registration failed. Please try again later.';
+                    registrationMessage.style.display = 'block';
+                    registrationMessage.classList.add('text-danger');
+
+                    setTimeout(() => {
+                        registrationMessage.style.display = 'none';
+                    }, 5000);
                 });
         });
         function showAlert(type, message) {
