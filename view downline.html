@@ -747,7 +747,7 @@
             async function fetchData(userId, level) {
                 const searchTerm = searchInput.val().toLowerCase();
                 const rowCount = parseInt(rowCountSelect.val(), 10);
-                const apiUrl = `https://aghan-backend.onrender.com/my-team/${level}?page=${currentPage}&pageSize=${rowCount}&search=${searchTerm}`;
+                const apiUrl = `https://aghan-backend-fbs2.vercel.app/my-team/${level}?page=${currentPage}&pageSize=${rowCount}&search=${searchTerm}`;
 
                 try {
                     const response = await fetch(apiUrl, {

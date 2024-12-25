@@ -520,7 +520,7 @@
                     throw new Error("Authentication token not found!");
                 }
 
-                const response = await fetch('https://aghan-backend.onrender.com/referrer-link', {
+                const response = await fetch('https://aghan-backend-fbs2.vercel.app/referrer-link', {
                     method: 'GET',
                     headers: {
                         'Authorization': `Bearer ${token}` // Include the JWT token in the header

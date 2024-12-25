@@ -959,7 +959,7 @@
             emailValidation.textContent = ''; // Clear any previous error messages
 
             try {
-                const response = await fetch('https://aghan-backend.onrender.com/send-otp', {
+                const response = await fetch('https://aghan-backend-fbs2.vercel.app/send-otp', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -1000,7 +1000,7 @@
                 registrationData[key] = value;
             }
 
-            fetch('https://aghan-backend.onrender.com/register', {
+            fetch('https://aghan-backend-fbs2.vercel.app/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -1040,7 +1040,7 @@
             const introducerId = event.target.value;
             if (introducerId) {
                 try {
-                    const response = await fetch(`https://aghan-backend.onrender.com/validate-introducer?introducerId=${introducerId}`);
+                    const response = await fetch(`https://aghan-backend-fbs2.vercel.app/validate-introducer?introducerId=${introducerId}`);
                     if (!response.ok) {
                         // Enhanced error handling
                         if (response.status === 404) {

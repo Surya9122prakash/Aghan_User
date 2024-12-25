@@ -536,7 +536,7 @@
                 return []; // Return empty array if not logged in
             }
             try {
-                const response = await fetch(`https://aghan-backend.onrender.com/silver-board-income?page=${page}&pageSize=${pageSize}&search=${search}`, {
+                const response = await fetch(`https://aghan-backend-fbs2.vercel.app/silver-board-income?page=${page}&pageSize=${pageSize}&search=${search}`, {
                     headers: {
                         'Authorization': `Bearer ${token}`
                     }

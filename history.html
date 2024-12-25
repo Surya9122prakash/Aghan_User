@@ -555,7 +555,7 @@
             }
 
             try {
-                const response = await fetch('https://aghan-backend.onrender.com/topup-history', {
+                const response = await fetch('https://aghan-backend-fbs2.vercel.app/topup-history', {
                     method: 'GET',
                     headers: {
                         'Authorization': `Bearer ${token}`
@@ -624,7 +624,7 @@
                 }
 
                 try {
-                    const response = await fetch('https://aghan-backend.onrender.com/rebirth-bonus-status', {
+                    const response = await fetch('https://aghan-backend-fbs2.vercel.app/rebirth-bonus-status', {
                         headers: { 'Authorization': `Bearer ${token}` }
                     });
 

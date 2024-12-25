@@ -508,7 +508,7 @@
                 const debounceLoadPayoutHistory = _.debounce(loadPayoutHistory, 300);
 
                 function loadPayoutHistory() {
-                    fetch('https://aghan-backend.onrender.com/payout-history', {
+                    fetch('https://aghan-backend-fbs2.vercel.app/payout-history', {
                         method: 'GET',
                         headers: {
                             Authorization: `Bearer ${sessionStorage.getItem('token')}`

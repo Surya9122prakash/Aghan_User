@@ -523,7 +523,7 @@
 
         async function fetchCurrentBalance() {
             try {
-                const response = await fetch('https://aghan-backend.onrender.com/current-balance', {
+                const response = await fetch('https://aghan-backend-fbs2.vercel.app/current-balance', {
                     method: 'GET',
                     headers: { 'Authorization': 'Bearer ' + sessionStorage.getItem('token1') }
                 });
@@ -549,7 +549,7 @@
             const amount = parseFloat(document.getElementById('amount').value);
 
             try {
-                const response = await fetch('https://aghan-backend.onrender.com/withdraw', {
+                const response = await fetch('https://aghan-backend-fbs2.vercel.app/withdraw', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

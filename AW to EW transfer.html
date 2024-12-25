@@ -472,7 +472,7 @@
 
 
             async function fetchBalance() {
-                const balanceResponse = await fetch('https://aghan-backend.onrender.com/current-balance', {
+                const balanceResponse = await fetch('https://aghan-backend-fbs2.vercel.app/current-balance', {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',
@@ -522,7 +522,7 @@
                 }
 
                 try {
-                    const response = await fetch('https://aghan-backend.onrender.com/aw-to-ew', {
+                    const response = await fetch('https://aghan-backend-fbs2.vercel.app/aw-to-ew', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
@@ -554,7 +554,7 @@
 
 
             async function fetchInternalTransferHistory() {
-                const historyResponse = await fetch('https://aghan-backend.onrender.com/aw-to-ew-history', {
+                const historyResponse = await fetch('https://aghan-backend-fbs2.vercel.app/aw-to-ew-history', {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',

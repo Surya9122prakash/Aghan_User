@@ -893,7 +893,7 @@
                         });
                         async function fetchUserProfile() {
                             try {
-                                const response = await fetch('https://aghan-backend.onrender.com/user', {
+                                const response = await fetch('https://aghan-backend-fbs2.vercel.app/user', {
                                     method: 'GET',
                                     headers: {
                                         'Authorization': `Bearer ${token}`
@@ -943,7 +943,7 @@
                             newsMarquee.innerHTML = '<div class="alert alert-info" role="alert">Loading News...</div>';
 
                             try {
-                                const response = await fetch('https://aghan-backend.onrender.com/news', {
+                                const response = await fetch('https://aghan-backend-fbs2.vercel.app/news', {
                                     method: 'GET',
                                     headers: {
                                         'Authorization': `Bearer ${token}`
@@ -981,7 +981,7 @@
                             }
                         }
                         async function logout() {
-                            fetch('https://aghan-backend.onrender.com/logout', {
+                            fetch('https://aghan-backend-fbs2.vercel.app/logout', {
                                 method: 'GET',
                                 headers: {
                                     'Authorization': `Bearer ${token}`
@@ -1016,7 +1016,7 @@
                             marquee.innerHTML = '<div class="alert alert-info" role="alert">Loading...</div>';
                             //Fetch Recent members from Genealogy
                             try {
-                                const response = await fetch(`https://aghan-backend.onrender.com/genealogy/${userId}/1`, { // Level 1
+                                const response = await fetch(`https://aghan-backend-fbs2.vercel.app/genealogy/${userId}/1`, { // Level 1
                                     method: 'GET',
                                     headers: {
                                         'Authorization': `Bearer ${token}`
@@ -1054,7 +1054,7 @@
 
                         async function fetchUserDetails(memberId) {
                             try {
-                                const response = await fetch(`https://aghan-backend.onrender.com/user/${memberId}`, { //API to fetch user details
+                                const response = await fetch(`https://aghan-backend-fbs2.vercel.app/user/${memberId}`, { //API to fetch user details
                                     method: 'GET',
                                     headers: {
                                         'Authorization': `Bearer ${token}`
@@ -1077,7 +1077,7 @@
                             const marquee = document.getElementById('achieversMarquee');
                             marquee.innerHTML = '<div class="alert alert-info" role="alert">Loading...</div>';
                             try {
-                                const response = await fetch('https://aghan-backend.onrender.com/achievers', {
+                                const response = await fetch('https://aghan-backend-fbs2.vercel.app/achievers', {
                                     method: 'GET',
                                     headers: {
                                         'Authorization': `Bearer ${token}`
@@ -1113,7 +1113,7 @@
                             const marquee = document.getElementById('newsMarquee');
                             marquee.innerHTML = '<div class="alert alert-info" role="alert">Loading News...</div>';
                             try {
-                                const response = await fetch('https://aghan-backend.onrender.com/news', {
+                                const response = await fetch('https://aghan-backend-fbs2.vercel.app/news', {
                                     method: 'GET',
                                     headers: {
                                         'Authorization': `Bearer ${token}`
@@ -1151,7 +1151,7 @@
                         async function fetchRebirthBonusStatus() {
                             const rebirthBonusButton = document.getElementById('rebirthBonusButton');
                             try {
-                                const response = await fetch('https://aghan-backend.onrender.com/rebirth-bonus-status', {
+                                const response = await fetch('https://aghan-backend-fbs2.vercel.app/rebirth-bonus-status', {
                                     method: 'GET',
                                     headers: { 'Authorization': 'Bearer ' + sessionStorage.getItem('token1') }
                                 });

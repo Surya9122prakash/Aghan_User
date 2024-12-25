@@ -634,7 +634,7 @@
                     throw new Error("Authentication token not found!");
                 }
 
-                const response = await fetch('https://aghan-backend.onrender.com/upi-details', {
+                const response = await fetch('https://aghan-backend-fbs2.vercel.app/upi-details', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -672,7 +672,7 @@
                     throw new Error("Authentication token not found!");
                 }
 
-                const response = await fetch('https://aghan-backend.onrender.com/upi-details', {
+                const response = await fetch('https://aghan-backend-fbs2.vercel.app/upi-details', {
                     method: 'GET',
                     headers: {
                         'Authorization': `Bearer ${token}`

@@ -532,7 +532,7 @@
 
             function updateTableDisplay() {
                 const searchTerm = searchInput.val().toLowerCase();
-                const apiUrl = `https://aghan-backend.onrender.com/users/achievers?page=${currentPage}&pageSize=${pageSize}&search=${searchTerm}`;
+                const apiUrl = `https://aghan-backend-fbs2.vercel.app/users/achievers?page=${currentPage}&pageSize=${pageSize}&search=${searchTerm}`;
                 const token = sessionStorage.getItem('token1'); // Get token from sessionStorage
 
                 if (!token) {

@@ -544,7 +544,7 @@
 
             function fetchSponsorIncome(page, pageSize) {
                 $.ajax({
-                    url: `https://aghan-backend.onrender.com/sponsor-income?page=${page}&pageSize=${pageSize}&search=${searchTerm}`,
+                    url: `https://aghan-backend-fbs2.vercel.app/sponsor-income?page=${page}&pageSize=${pageSize}&search=${searchTerm}`,
                     type: 'GET',
                     headers: {
                         'Authorization': 'Bearer ' + sessionStorage.getItem('token1') // Get token from sessionStorage

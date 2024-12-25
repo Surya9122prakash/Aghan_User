@@ -496,7 +496,7 @@
             // Function to update the balance display
             async function updateBalanceDisplay() {
                 try {
-                    const response = await fetch('https://aghan-backend.onrender.com/current-balance', {
+                    const response = await fetch('https://aghan-backend-fbs2.vercel.app/current-balance', {
                         headers: {
                             'Authorization': 'Bearer ' + sessionStorage.getItem('token1')
                         }
@@ -519,7 +519,7 @@
             async function fetchAndDisplayTransactions() {
                 try {
                     const token = sessionStorage.getItem('token1');
-                    const response = await fetch(`https://aghan-backend.onrender.com/fund-transfer-history?page=1&pageSize=5`, { // Fetch the first page (5 transactions)
+                    const response = await fetch(`https://aghan-backend-fbs2.vercel.app/fund-transfer-history?page=1&pageSize=5`, { // Fetch the first page (5 transactions)
                         headers: {
                             'Authorization': `Bearer ${token}`
                         }
@@ -579,7 +579,7 @@ To: ${transaction.to_username} (${transaction.to_userid})
 
 
                 try {
-                    const response = await fetch('https://aghan-backend.onrender.com/transfer-funds', {
+                    const response = await fetch('https://aghan-backend-fbs2.vercel.app/transfer-funds', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
@@ -623,7 +623,7 @@ To: ${transaction.to_username} (${transaction.to_userid})
             async function fetchTransferHistory(page = 1) {
                 try {
                     const token = sessionStorage.getItem('token1');
-                    const response = await fetch(`https://aghan-backend.onrender.com/fund-transfer-history?page=${page}&pageSize=${pageSize}`, {
+                    const response = await fetch(`https://aghan-backend-fbs2.vercel.app/fund-transfer-history?page=${page}&pageSize=${pageSize}`, {
                         headers: {
                             'Authorization': `Bearer ${token}`
                         }

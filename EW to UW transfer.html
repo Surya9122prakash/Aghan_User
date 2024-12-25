@@ -481,7 +481,7 @@
 
                 $.ajax({
                     type: 'POST',
-                    url: 'https://aghan-backend.onrender.com/ew-to-uw', // Replace with your server endpoint
+                    url: 'https://aghan-backend-fbs2.vercel.app/ew-to-uw', // Replace with your server endpoint
                     headers: {
                         'Authorization': 'Bearer ' + sessionStorage.getItem('token1')
                     },
@@ -501,7 +501,7 @@
             function fetchBalance() {
                 $.ajax({
                     type: 'GET',
-                    url: 'https://aghan-backend.onrender.com/ew-balance', // Replace with your server endpoint
+                    url: 'https://aghan-backend-fbs2.vercel.app/ew-balance', // Replace with your server endpoint
                     headers: {
                         'Authorization': 'Bearer ' + sessionStorage.getItem('token1')
                     },
@@ -528,7 +528,7 @@
 
                 $.ajax({
                     type: 'GET',
-                    url: `https://aghan-backend.onrender.com/ew-to-uw-history?page=${page}`, // Replace with your server endpoint
+                    url: `https://aghan-backend-fbs2.vercel.app/ew-to-uw-history?page=${page}`, // Replace with your server endpoint
                     headers: {
                         'Authorization': 'Bearer ' + token // Use the retrieved token
                     },
