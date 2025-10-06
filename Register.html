@@ -53,6 +53,10 @@
             display: none;
             margin-top: 10px;
         }
+
+        .text-success {
+            color: #ffffff !important;
+        }
     </style>
 </head>
 
@@ -467,7 +471,7 @@
                 return;
             }
 
-            fetch(window.ENV.API_BASE_URL+ '/send-otp', {
+            fetch(window.ENV.API_BASE_URL + '/send-otp', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -526,7 +530,7 @@
             }
 
             // Send data to server using Fetch API
-            fetch(window.ENV.API_BASE_URL+ '/register', {
+            fetch(window.ENV.API_BASE_URL + '/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
