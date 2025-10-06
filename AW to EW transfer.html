@@ -8,6 +8,7 @@
     <meta name="description" content="Aghan Promoters" />
     <meta name="keyword" content="Aghan Promoters" />
     <meta name="author" content="Aghan Promoters" />
+    <script src="config.js"></script>
     <title>AW to EW Transfer - Aghan Promoters</title>
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/Dashboard/logo.png" />
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
@@ -472,7 +473,7 @@
 
 
             async function fetchBalance() {
-                const balanceResponse = await fetch('https://aghan-backend-fbs2.vercel.app/current-balance', {
+                const balanceResponse = await fetch(window.ENV.API_BASE_URL+ '/current-balance', {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',
@@ -522,7 +523,7 @@
                 }
 
                 try {
-                    const response = await fetch('https://aghan-backend-fbs2.vercel.app/aw-to-ew', {
+                    const response = await fetch(window.ENV.API_BASE_URL+ '/aw-to-ew', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
@@ -554,7 +555,7 @@
 
 
             async function fetchInternalTransferHistory() {
-                const historyResponse = await fetch('https://aghan-backend-fbs2.vercel.app/aw-to-ew-history', {
+                const historyResponse = await fetch(window.ENV.API_BASE_URL+ '/aw-to-ew-history', {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',

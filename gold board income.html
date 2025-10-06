@@ -8,6 +8,7 @@
     <meta name="description" content="Aghan Promoters" />
     <meta name="keyword" content="Aghan Promoters" />
     <meta name="author" content="Aghan Promoters" />
+    <script src="config.js"></script>
     <title>Gold Board Income - Aghan Promoters</title>
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/Dashboard/logo.png" />
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
@@ -536,7 +537,7 @@
             }
 
             try {
-                const response = await fetch(`https://aghan-backend-fbs2.vercel.app/gold-board-income?page=${page}&pageSize=${pageSize}&search=${search}`, {
+                const response = await fetch(`${window.ENV.API_BASE_URL}/gold-board-income?page=${page}&pageSize=${pageSize}&search=${search}`, {
                     headers: {
                         'Authorization': `Bearer ${token}`
                     }

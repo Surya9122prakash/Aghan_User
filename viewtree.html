@@ -8,6 +8,7 @@
    <meta name="description" content="Aghan Promoters" />
    <meta name="keyword" content="Aghan Promoters" />
    <meta name="author" content="Aghan Promoters" />
+   <script src="config.js"></script>
    <title>Tree View - Aghan Promoters</title>
    <link rel="shortcut icon" type="image/x-icon" href="assets/images/Dashboard/logo.png" />
    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
@@ -423,7 +424,7 @@
 
       async function fetchGenealogyData(userId) {
          try {
-            const response = await fetch(`https://aghan-backend-fbs2.vercel.app/tree/${userId}`, {
+            const response = await fetch(`${window.ENV.API_BASE_URL}/tree/${userId}`, {
                headers: {
                   'Authorization': 'Bearer ' + getAuthToken()
                }
@@ -520,7 +521,7 @@
          //This function is not directly used in viewtree.html but kept here for completeness if needed later
          try {
             const token = sessionStorage.getItem('token1');
-            const response = await fetch('https://aghan-backend-fbs2.vercel.app/user', {
+            const response = await fetch(window.ENV.API_BASE_URL+ '/user', {
                headers: {
                   'Authorization': 'Bearer ' + token
                }

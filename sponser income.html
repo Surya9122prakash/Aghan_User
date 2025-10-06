@@ -8,6 +8,7 @@
     <meta name="description" content="Aghan Promoters" />
     <meta name="keyword" content="Aghan Promoters" />
     <meta name="author" content="Aghan Promoters" />
+    <script src="config.js"></script>
     <title>Sponser Income - Aghan Promoters</title>
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/Dashboard/logo.png" />
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
@@ -544,7 +545,7 @@
 
             function fetchSponsorIncome(page, pageSize) {
                 $.ajax({
-                    url: `https://aghan-backend-fbs2.vercel.app/sponsor-income?page=${page}&pageSize=${pageSize}&search=${searchTerm}`,
+                    url: `${window.ENV.API_BASE_URL}/sponsor-income?page=${page}&pageSize=${pageSize}&search=${searchTerm}`,
                     type: 'GET',
                     headers: {
                         'Authorization': 'Bearer ' + sessionStorage.getItem('token1') // Get token from sessionStorage

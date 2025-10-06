@@ -8,6 +8,7 @@
     <meta name="description" content="Aghan Promoters" />
     <meta name="keyword" content="Aghan Promoters" />
     <meta name="author" content="Aghan Promoters" />
+    <script src="config.js"></script>
     <title>EW to UW Transfer - Aghan Promoters</title>
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/Dashboard/logo.png" />
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
@@ -481,7 +482,7 @@
 
                 $.ajax({
                     type: 'POST',
-                    url: 'https://aghan-backend-fbs2.vercel.app/ew-to-uw', // Replace with your server endpoint
+                    url: window.ENV.API_BASE_URL+ '/ew-to-uw', // Replace with your server endpoint
                     headers: {
                         'Authorization': 'Bearer ' + sessionStorage.getItem('token1')
                     },
@@ -501,7 +502,7 @@
             function fetchBalance() {
                 $.ajax({
                     type: 'GET',
-                    url: 'https://aghan-backend-fbs2.vercel.app/ew-balance', // Replace with your server endpoint
+                    url: window.ENV.API_BASE_URL+ '/ew-balance', // Replace with your server endpoint
                     headers: {
                         'Authorization': 'Bearer ' + sessionStorage.getItem('token1')
                     },
@@ -528,7 +529,7 @@
 
                 $.ajax({
                     type: 'GET',
-                    url: `https://aghan-backend-fbs2.vercel.app/ew-to-uw-history?page=${page}`, // Replace with your server endpoint
+                    url: `${window.ENV.API_BASE_URL}/ew-to-uw-history?page=${page}`, // Replace with your server endpoint
                     headers: {
                         'Authorization': 'Bearer ' + token // Use the retrieved token
                     },

@@ -8,6 +8,7 @@
     <meta name="description" content="Aghan Promoters" />
     <meta name="keyword" content="Aghan Promoters" />
     <meta name="author" content="Aghan Promoters" />
+    <script src="config.js"></script>
     <title>My Team - Aghan Promoters</title>
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/Dashboard/logo.png" />
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
@@ -467,7 +468,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', async () => {
             try {
-                const response = await fetch('https://aghan-backend-fbs2.vercel.app/my-team', {
+                const response = await fetch(window.ENV.API_BASE_URL+ '/my-team', {
                     headers: {
                         'Authorization': 'Bearer ' + sessionStorage.getItem('token1')
                     }

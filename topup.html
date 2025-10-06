@@ -8,6 +8,7 @@
     <meta name="description" content="Aghan Promoters" />
     <meta name="keyword" content="Aghan Promoters" />
     <meta name="author" content="Aghan Promoters" />
+    <script src="config.js"></script>
     <title>Topup - Aghan Promoters</title>
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/Dashboard/logo.png" />
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
@@ -473,7 +474,7 @@
                 }
 
                 try {
-                    const response = await fetch('https://aghan-backend-fbs2.vercel.app/user-topup', {
+                    const response = await fetch(window.ENV.API_BASE_URL+ '/user-topup', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
@@ -521,7 +522,7 @@
                 const userId = userIdInput.value;
                 if (userId.length >= 7) { // Only validate if the ID is at least 7 characters long
                     try {
-                        const response = await fetch(`https://aghan-backend-fbs2.vercel.app/validate-id?id=${userId}`);
+                        const response = await fetch(`${window.ENV.API_BASE_URL}/validate-id?id=${userId}`);
                         if (response.ok) {
                             const data = await response.json();
                             if (data.exists) {
@@ -545,7 +546,7 @@
             async function fetchRebirthBonusStatus() {
                 const rebirthBonusButton = document.getElementById('rebirthBonusButton');
                 try {
-                    const response = await fetch('https://aghan-backend-fbs2.vercel.app/rebirth-bonus-status', {
+                    const response = await fetch(window.ENV.API_BASE_URL+ '/rebirth-bonus-status', {
                         method: 'GET',
                         headers: { 'Authorization': 'Bearer ' + sessionStorage.getItem('token1') }
                     });
@@ -578,7 +579,7 @@
 
             async function fetchPackages() {
                 try {
-                    const response = await fetch('https://aghan-backend-fbs2.vercel.app/packages', {
+                    const response = await fetch(window.ENV.API_BASE_URL+ '/packages', {
                         headers: { 'Authorization': 'Bearer ' + sessionStorage.getItem('token1') }
                     });
                     if (!response.ok) {

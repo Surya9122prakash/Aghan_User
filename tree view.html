@@ -8,6 +8,7 @@
     <meta name="description" content="" />
     <meta name="keyword" content="" />
     <meta name="author" content="WRAPCODERS" />
+    <script src="config.js"></script>
     <title>Tree View - Aghan Promoters</title>
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/Dashboard/logo.png" />
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
@@ -563,7 +564,7 @@
                 const rowCount = parseInt(rowCountSelect.val(), 10);
 
                 try {
-                    const response = await fetch(`https://aghan-backend-fbs2.vercel.app/tree-view?page=${currentPage}&pageSize=${rowCount}&search=${encodeURIComponent(searchTerm)}`, {
+                    const response = await fetch(`${window.ENV.API_BASE_URL}/tree-view?page=${currentPage}&pageSize=${rowCount}&search=${encodeURIComponent(searchTerm)}`, {
                         headers: {
                             'Authorization': 'Bearer ' + sessionStorage.getItem('token1')
                         }

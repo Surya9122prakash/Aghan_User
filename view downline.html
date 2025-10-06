@@ -8,6 +8,7 @@
     <meta name="description" content="Aghan Promoters" />
     <meta name="keyword" content="Aghan Promoters" />
     <meta name="author" content="Aghan Promoters" />
+    <script src="config.js"></script>
     <title>View Downline - Aghan Promoters</title>
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/Dashboard/logo.png" />
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
@@ -747,7 +748,7 @@
             async function fetchData(userId, level) {
                 const searchTerm = searchInput.val().toLowerCase();
                 const rowCount = parseInt(rowCountSelect.val(), 10);
-                const apiUrl = `https://aghan-backend-fbs2.vercel.app/my-team/${level}?page=${currentPage}&pageSize=${rowCount}&search=${searchTerm}`;
+                const apiUrl = `${window.ENV.API_BASE_URL}/my-team/${level}?page=${currentPage}&pageSize=${rowCount}&search=${searchTerm}`;
 
                 try {
                     const response = await fetch(apiUrl, {

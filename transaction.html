@@ -8,6 +8,7 @@
     <meta name="description" content="" />
     <meta name="keyword" content="" />
     <meta name="author" content="WRAPCODERS" />
+    <script src="config.js"></script>
     <title>Transactions - Aghan Promoters</title>
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/Dashboard/logo.png" />
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
@@ -605,11 +606,11 @@
 
             const defaultAmount = 0.00; // Default value if data fetch fails
             const apiUrls = {
-                main: 'https://aghan-backend-fbs2.vercel.app/current-balance',
-                send: 'https://aghan-backend-fbs2.vercel.app/transaction-send-income',
-                receive: 'https://aghan-backend-fbs2.vercel.app/transaction-receive-income',
-                walletTransfer: 'https://aghan-backend-fbs2.vercel.app/transaction-wallet-transfer',
-                withdraw: 'https://aghan-backend-fbs2.vercel.app/transaction/withdrawal'
+                main: window.ENV.API_BASE_URL+ '/current-balance',
+                send: window.ENV.API_BASE_URL+ '/transaction-send-income',
+                receive: window.ENV.API_BASE_URL+ '/transaction-receive-income',
+                walletTransfer: window.ENV.API_BASE_URL+ '/transaction-wallet-transfer',
+                withdraw: window.ENV.API_BASE_URL+ '/transaction/withdrawal'
             };
             const transactionElements = {
                 totalUpgrade: 'totalUpgrade',

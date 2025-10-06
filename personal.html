@@ -8,6 +8,7 @@
     <meta name="description" content="Aghan Promoters" />
     <meta name="keyword" content="Aghan Promoters" />
     <meta name="author" content="Aghan Promoters" />
+    <script src="config.js"></script>
     <title>Personal - Aghan Promoters</title>
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/Dashboard/logo.png" />
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
@@ -645,7 +646,7 @@
             };
             console.log("req.body", updatedData)
             try {
-                const response = await fetch('https://aghan-backend-fbs2.vercel.app/update-personal', { // Update endpoint URL
+                const response = await fetch(window.ENV.API_BASE_URL+ '/update-personal', { // Update endpoint URL
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json',
@@ -701,7 +702,7 @@
 
         async function fetchUserData() {
             try {
-                const response = await fetch('https://aghan-backend-fbs2.vercel.app/personal', {
+                const response = await fetch(window.ENV.API_BASE_URL+ '/personal', {
                     headers: {
                         'Authorization': `Bearer ${sessionStorage.getItem('token1')}`
                     }

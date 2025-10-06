@@ -8,6 +8,7 @@
     <meta name="description" content="Aghan Promoters" />
     <meta name="keyword" content="Aghan Promoters" />
     <meta name="author" content="Aghan Promoters" />
+    <script src="config.js"></script>
     <title>My Accounts - Aghan Promoters</title>
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/Dashboard/logo.png" />
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
@@ -556,7 +557,7 @@
 
             function fetchAndDisplayTransactions(page = 1, search = "", rowsPerPage = currentPageSize) {
                 $.ajax({
-                    url: `https://aghan-backend-fbs2.vercel.app/income-transactions?page=${page}&pageSize=${rowsPerPage}&search=${search}`,
+                    url: `${window.ENV.API_BASE_URL}/income-transactions?page=${page}&pageSize=${rowsPerPage}&search=${search}`,
                     type: 'GET',
                     headers: { 'Authorization': 'Bearer ' + sessionStorage.getItem('token1') },
                     success: function (response) {
