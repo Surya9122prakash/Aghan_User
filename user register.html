@@ -142,7 +142,8 @@
                             </li>
                             <li class="nxl-item"><a class="nxl-link" href="payout.html">Payout Request</a>
                             </li>
-                            <li class="nxl-item"><a class="nxl-link" href="payout history.html">Payout Request History</a>
+                            <li class="nxl-item"><a class="nxl-link" href="payout history.html">Payout Request
+                                    History</a>
                             </li>
                         </ul>
                     </li>
@@ -446,9 +447,11 @@
                 display: none;
             }
         }
+
         .introducer-id-wrapper {
             position: relative;
         }
+
         .dont-know-button {
             position: absolute;
             padding-top: 20px;
@@ -472,7 +475,7 @@
                             <form action="" id="registrationForm" class="w-100 mt-4 pt-2">
                                 <div class="mb-4">
                                     <input type="text" class="form-control" placeholder="Enter Introducer ID"
-                                        id="introducerid">
+                                        id="introducer_id" name="introducer_id" for="introducer_id">
                                     <a class="dont-know-button" onclick="handleDontKnow()">I don't know?</a>
                                     <span id="introducerIdValidation" class="text-danger"></span>
                                 </div>
@@ -509,6 +512,10 @@
                                 <div class="mb-4">
                                     <input type="text" id="city" class="form-control" name="city" for="city"
                                         placeholder="Enter Your City" required>
+                                </div>
+                                <div class="mb-4">
+                                    <input type="text" id="mobile" class="form-control" name="mobile" for="mobile"
+                                        placeholder="Enter Your Mobile" required>
                                 </div>
                                 <div class="mb-4">
                                     <input type="number" id="zipcode" class="form-control" name="zipcode" for="zipcode"
@@ -934,6 +941,7 @@
         const otpInput = document.getElementById('otp');
         const addressInput = document.getElementById('address');
         const cityInput = document.getElementById('city');
+        const mobileInput = document.getElementById('mobile');
         const zipcodeInput = document.getElementById('zipcode');
         const countrySelect = document.getElementById('country');
         const stateSelect = document.getElementById('state');
@@ -960,7 +968,7 @@
             emailValidation.textContent = ''; // Clear any previous error messages
 
             try {
-                const response = await fetch(window.ENV.API_BASE_URL+ '/send-otp', {
+                const response = await fetch(window.ENV.API_BASE_URL + '/send-otp', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -1001,7 +1009,7 @@
                 registrationData[key] = value;
             }
 
-            fetch(window.ENV.API_BASE_URL+ '/register', {
+            fetch(window.ENV.API_BASE_URL + '/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
